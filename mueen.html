@@ -1,0 +1,593 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>حلقة</title><style>*{box-sizing:border-box;font-family:"Sakkal Majalla",serif} body{margin:0;background:#f4f0e7;color:#17253b;font-family:"Sakkal Majalla",serif}.app{max-width:430px;min-height:100vh;margin:auto;background:#fff;padding:18px}.head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.logo{font-size:32px;font-weight:800}.muted{color:#777;font-size:12px}.datebox{background:linear-gradient(135deg,#16243a 0%,#1d2d46 100%);color:#fff;border-radius:24px;padding:19px 20px;margin-bottom:16px;text-align:center;box-shadow:0 12px 28px rgba(23,37,59,.11);border:1px solid rgba(255,255,255,.06)}.datebox .day{font-size:21px;font-weight:800;color:#eee3c9;margin-bottom:11px;line-height:1.1}.datebox .h,.datebox .g{font-size:17px;font-weight:700;line-height:1.35;letter-spacing:.1px}.datebox .g{margin-top:9px;padding-top:9px;border-top:1px solid rgba(238,227,201,.18)}.status-none{background:#f1eee7!important;color:#777}.status-absent{background:#f7dede!important;color:#a12b2b}.status-excused{background:#f6edcf!important;color:#7d651e}.status-present{background:#e3f1e6!important;color:#24623a}.avatar{width:44px;height:44px;border-radius:50%;background:#eee3c9;display:grid;place-items:center;font-weight:bold}.welcome{background:#faf7ef;border:1px solid #e6dece;border-radius:20px;padding:16px;margin-bottom:15px}.icons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:18px 0 22px}.icon{border:1px solid #e3dccf;border-radius:20px;padding:15px 7px;text-align:center;background:#fff;cursor:pointer;font-weight:bold}.icon span{display:block;font-size:25px;margin-bottom:7px}.svgicon{font-family:Arial,sans-serif;line-height:1}.calendar{border:1px solid #e5dfd4;border-radius:20px;padding:15px}.calhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.days,.dates{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;text-align:center}.days{font-size:12px;color:#888;margin-bottom:6px;white-space:nowrap}.date{min-height:39px;border-radius:10px;display:grid;place-items:center;font-size:12px}.classday{background:#eee3c9;font-weight:bold}.today{outline:2px solid #b49a61}.panel{display:none;margin-top:15px}.panel.show{display:block}#home{display:none}#home.show{display:block}.card{border:1px solid #e4ded4;border-radius:17px;padding:14px;margin-bottom:9px;background:#fff}.row{display:flex;justify-content:space-between;align-items:center;gap:8px}.student{font-weight:bold}.tag{background:#f1eee7;border-radius:9px;padding:5px 8px;font-size:11px}.bar{height:7px;background:#e8e5df;border-radius:8px;overflow:hidden;margin-top:10px}.fill{height:100%;background:#b49a61}input,select,button{width:100%;padding:12px;border-radius:12px;border:1px solid #ddd5c6;background:#fff;font-size:15px}button{cursor:pointer;font-weight:bold}.primary{background:#17253b;color:white}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.back{margin-bottom:12px;width:auto;padding:8px 14px;background:#faf7ef;border-color:#e4dac8;color:#17253b;font-family:inherit;font-size:15px}.selected-surahs{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0}.selected-chip{display:inline-flex;align-items:center;gap:5px;background:#f5f1e8;border:1px solid #e1d6c1;border-radius:999px;padding:5px 9px;font-size:13px}.selected-chip button{width:auto;padding:0;border:0;background:none;font-size:16px;line-height:1;color:#8b713b}.surah{display:flex;justify-content:space-between;align-items:center;padding:11px 12px;margin:7px 0;border:1px solid #ebe5da;border-radius:14px;background:#fffdf9;font-size:16px;gap:12px;box-shadow:0 2px 8px rgba(23,37,59,.035);transition:.16s}.surah:hover{border-color:#d8c9aa;background:#fcfaf5}.surah-name{display:flex;align-items:center;gap:11px;min-width:0}.surah-no{width:34px;height:34px;min-width:34px;border-radius:11px;background:#f5f0e5;border:1px solid #e2d6bd;color:#8b713b;display:grid;place-items:center;font-size:15px;font-weight:700}.surah-title{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:17px;font-weight:600}.surah-state{font-size:12px;white-space:nowrap;background:#f1eee7;border-radius:999px;padding:5px 9px;color:#777}.surah:nth-child(2) .surah-state{background:#f6edcf;color:#7d651e}.surah-list-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}.bottom{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:18px;border-top:1px solid #eee;padding-top:12px}.bottom button{border:0;background:transparent;font-size:11px}.smallbtn{width:auto;padding:7px 10px;font-size:11px}.circle-name{font-size:21px;font-weight:700;color:#b49a61;margin-top:3px;letter-spacing:0;line-height:1.15}.logo{letter-spacing:-.5px}.head{padding:4px 2px 0}.icon{min-height:160px;height:160px;padding:14px 8px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:11px;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;border-color:#e7dfd1;box-shadow:0 5px 16px rgba(23,37,59,.045)}.icon:hover{transform:translateY(-2px);border-color:#d9ccb2;box-shadow:0 9px 22px rgba(23,37,59,.08);background:#fffdfa}.icon:active{transform:translateY(0)}.svgicon{width:68px;height:68px;margin:0 auto;border-radius:18px;background:#f4efe5;color:#17253b;display:flex;align-items:center;justify-content:center;padding:0;flex:0 0 68px;line-height:0;box-sizing:border-box}.svgicon svg{width:32px;height:32px;display:block;margin:0;flex:0 0 32px;transform:none}.svgicon svg{width:30px;height:30px;display:block;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}.icon > :last-child{font-size:17px;line-height:1.1;color:#17253b}.datebox{box-shadow:0 10px 28px rgba(23,37,59,.10);padding:20px 22px}.date-layout{display:grid;grid-template-columns:120px 1fr;align-items:center;gap:24px;text-align:right;min-height:112px}.day-wrap{width:120px;min-width:120px;text-align:right;border-left:1px solid rgba(238,227,201,.20);padding-left:22px;display:flex;flex-direction:column;justify-content:center}.day-label{font-size:14px;color:#cfc5ad;margin-bottom:5px;line-height:1.1}.datebox .day{font-size:28px;font-weight:800;color:#eee3c9;margin:0;line-height:1.05}.dates-wrap{flex:1;text-align:left;display:flex;flex-direction:column;justify-content:center;gap:0}.datebox .h,.datebox .g{font-size:20px;font-weight:700;line-height:1.35;letter-spacing:0;white-space:nowrap}.datebox .h{padding-bottom:10px}.datebox .g{margin:0;padding:10px 0 0;border-top:1px solid rgba(238,227,201,.16)}.welcome{box-shadow:0 5px 18px rgba(23,37,59,.035)}.calendar{box-shadow:0 5px 18px rgba(23,37,59,.035)}.card{box-shadow:0 4px 14px rgba(23,37,59,.035)}.bottom button{font-family:inherit;font-weight:700;color:#5c6470}.bottom button:first-line{font-family:Arial,sans-serif;font-size:20px}.muted{font-family:inherit}''
+.svgicon{font-family:inherit;display:grid;place-items:center}.svgicon svg{display:block;width:28px;height:28px;flex:0 0 28px;margin:0;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.icon:hover{border-color:#b49a61;background:#fcfaf5}.icon:active{transform:translateY(1px)}#surahSelect{height:auto;min-height:150px;padding:8px;background:#fbfaf7}#surahSelect option{padding:8px;border-radius:7px;margin:2px 0}#surahSelect option:checked{background:#eee3c9;color:#17253b;font-weight:700}
+
+.surah-picker{border:1px solid #e3dccf;border-radius:16px;background:#fcfbf8;padding:7px;max-height:220px;overflow:auto;box-shadow:inset 0 1px 2px rgba(23,37,59,.03)}.surah-option{width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;border:0;border-bottom:1px solid #eee9df;background:transparent;padding:10px 9px;border-radius:11px;color:#17253b;text-align:right;font-family:inherit;font-size:16px;cursor:pointer}.surah-option:last-child{border-bottom:0}.surah-option:hover{background:#f5f1e8}.surah-option.selected{background:#eee3c9;font-weight:700}.surah-option .pick{width:22px;height:22px;border:1px solid #cfc5b3;border-radius:7px;display:grid;place-items:center;flex:0 0 22px;color:#fff;font-family:Arial,sans-serif;font-size:13px}.surah-option.selected .pick{background:#17253b;border-color:#17253b}.surah-option .surah-label{display:flex;align-items:center;gap:9px;min-width:0}.surah-option .mini-no{width:28px;height:28px;border-radius:9px;background:#f1eee7;color:#8b713b;display:grid;place-items:center;font-size:13px;flex:0 0 28px}.selection-note{display:flex;justify-content:space-between;align-items:center;margin-top:7px;padding:7px 9px;border-radius:10px;background:#f7f4ed;color:#777;font-size:12px}.clear-selection{border:0;background:transparent;color:#8b713b;font-family:inherit;font-size:12px;width:auto;padding:0;cursor:pointer}.activity-card-title{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.activity-card-title{display:block;margin-bottom:6px}.activity-card-title b{font-size:22px;font-weight:700;line-height:1.35}.card>p.muted{font-size:15px;line-height:1.7;margin:6px 0 12px}.mode-tabs{gap:9px;margin:12px 0}.mode{font-size:18px!important;min-height:52px;padding:10px 12px!important;border-radius:14px!important}.mode.active{box-shadow:0 4px 12px rgba(23,37,59,.08)}.surah-picker{font-size:17px}.surah-option{font-size:18px;padding:11px 10px;margin:6px 0;border:1px solid #ebe5da;border-radius:14px;background:#fffdf9}.surah-option .mini-no{font-size:14px}.selection-note{font-size:15px;padding:9px 11px}.clear-selection{font-size:15px}.formgrid input{font-size:18px!important;min-height:52px}.formgrid>div>label,.card label.muted{font-size:15px!important;line-height:1.5}.primary{font-size:19px!important;min-height:54px;margin-top:14px}.muted{font-size:15px}.activity-card-title+.muted{font-size:15px}
+.home-icon-refined{width:68px!important;height:68px!important;min-width:68px!important;min-height:68px!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:0!important;margin:0 auto!important;border-radius:18px!important;box-sizing:border-box!important}.home-icon-refined svg{width:32px!important;height:32px!important;display:block!important;margin:0!important;flex:none!important}.icons .icon{align-items:center!important;justify-content:center!important}.icons .icon .svgicon{position:relative!important;inset:auto!important;align-self:center!important}.icons .icon > :last-child{margin:0!important;text-align:center!important}.progress-stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;font-size:14px}.progress-stats span{background:#f5f1e8;border-radius:10px;padding:6px 9px}.progress-stats b{font-weight:700}.pending-activities{margin:12px 0 16px}.pending-item{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 16px;margin-top:9px;border:1px solid #e2d8c5;border-radius:16px;background:#faf8f2;min-height:64px}.pending-item>div{display:flex;flex-direction:column;gap:4px;min-width:0}.pending-item b{font-size:18px;line-height:1.35;color:#17263f}.pending-item span{font-size:15px;line-height:1.45;color:#888}.pending-item button{border:0;background:#efe9dc;color:#9a7a3d;border-radius:50%;width:34px;height:34px;min-width:34px;font-size:21px;line-height:1;cursor:pointer}.pending-item button:hover{background:#e8dfcf}
+.add-action{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:92px;min-width:92px;height:48px;padding:0 12px;margin-top:18px;border-radius:15px;font-size:17px;font-weight:700;box-sizing:border-box;}
+.add-action .add-icon{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;font-size:21px;line-height:1;font-weight:400;}
+
+/* Home navigation: four equal, refined icons */
+#home .icons{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0 24px}
+#home .icons .icon{height:148px!important;min-height:148px!important;padding:14px 10px!important;border-radius:20px!important;font-size:20px!important;gap:10px!important;border:1px solid #e3dccf!important;background:#fff!important;box-shadow:0 6px 18px rgba(23,37,59,.055)!important;color:#17253b!important}
+#home .icons .home-icon-refined{width:76px!important;height:76px!important;min-width:76px!important;min-height:76px!important;border-radius:20px!important;background:#f5f0e6!important;border:1px solid #e5dccf!important;color:#17253b!important}
+#home .icons .home-icon-refined svg{width:36px!important;height:36px!important;stroke:currentColor!important;stroke-width:1.7!important}
+#home .icons .icon:hover{transform:translateY(-2px);border-color:#cdbd9f!important;background:#fffdfa!important;box-shadow:0 10px 22px rgba(23,37,59,.08)!important}
+@media(max-width:360px){#home .icons{gap:12px}#home .icons .icon{height:138px!important;min-height:138px!important;font-size:18px!important}#home .icons .home-icon-refined{width:70px!important;height:70px!important;min-width:70px!important;min-height:70px!important}}
+</style><style>
+/* تقارير مُعين — تصميم احترافي وهادئ */
+.report-hero{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:18px 18px 16px;background:linear-gradient(135deg,#f8f5ee,#fff);border:1px solid #e7dece;border-radius:20px;margin-bottom:12px}
+.report-kicker{font-size:14px;color:#9a8358;margin-bottom:2px}
+.report-hero h2{margin:0;font-size:29px;line-height:1.1;color:#17253b;font-weight:700}
+.report-hero p{margin:6px 0 0;color:#777;font-size:15px;line-height:1.45}
+.report-icon{width:52px;height:52px;min-width:52px;border-radius:16px;background:#f1ede4;display:flex;align-items:center;justify-content:center;color:#17253b}
+.report-icon svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.report-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+.report-tab{min-height:52px;border:1px solid #e3dacb;background:#fff;border-radius:15px;color:#59606a;font-family:"Sakkal Majalla",serif;font-size:18px;display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;transition:.18s}
+.report-tab.active{background:#17253b;color:#fff;border-color:#17253b;box-shadow:0 5px 14px rgba(23,37,59,.10)}
+.tab-icon{width:25px;height:25px;border-radius:8px;background:#f3eee5;color:#17253b;display:inline-flex;align-items:center;justify-content:center;font-size:15px;font-family:Arial,sans-serif}
+.report-tab.active .tab-icon{background:rgba(255,255,255,.16);color:#fff}
+.report-card{background:#fff;border:1px solid #e6ddcf;border-radius:20px;padding:16px;margin-bottom:12px;box-shadow:0 5px 18px rgba(23,37,59,.035)}
+.report-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding-bottom:13px;border-bottom:1px solid #eee7dc}
+.report-card-head h3{margin:0;font-size:23px;color:#17253b;line-height:1.2}
+.report-card-head p{margin:5px 0 0;color:#888;font-size:14px;line-height:1.45}
+.report-period{background:#f5f1e8;color:#8a754d;border-radius:20px;padding:5px 10px;font-size:13px;white-space:nowrap}
+.report-summary{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:8px;margin:14px 0 16px}
+.summary-item{border:1px solid #e9e1d5;border-radius:15px;padding:12px 8px;text-align:center;background:#faf9f6;min-height:82px;display:flex;flex-direction:column;justify-content:center}
+.summary-item .summary-label{font-size:14px;color:#888;line-height:1.25}
+.summary-item strong{font-size:25px;line-height:1.05;color:#17253b;margin-top:4px}
+.summary-item strong small{font-size:13px;color:#888;font-weight:400}
+.summary-item.primary{background:#f3efe6;border-color:#ded3c1}
+.summary-item.primary strong{font-size:28px}
+.section-label{font-size:16px;font-weight:700;color:#17253b;margin:0 0 7px}
+.attendance-report-list{display:flex;flex-direction:column}
+.attendance-report-row{display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;padding:12px 0;border-top:1px solid #eee8de}
+.attendance-report-row:first-child{border-top:0}
+.student-name{font-size:19px;font-weight:700;color:#17253b}
+.attendance-badges{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
+.att-badge{padding:4px 8px;border-radius:9px;font-size:14px;line-height:1.2;border:1px solid transparent;white-space:nowrap}
+.att-badge.present{background:#eef6ef;color:#356744;border-color:#dce9de}.att-badge.excused{background:#faf5e5;color:#816a28;border-color:#eee3c3}.att-badge.absent{background:#fbefef;color:#9d3c3c;border-color:#efd9d9}
+.progress-report-list{display:flex;flex-direction:column;gap:9px;margin-top:13px}
+.progress-item{border:1px solid #e9e1d6;border-radius:15px;padding:13px;background:#fff}
+.progress-item .top{display:flex;align-items:center;justify-content:space-between;gap:10px}.progress-item .name{font-size:19px;font-weight:700;color:#17253b}.progress-percent{font-size:15px;color:#8b713b;background:#f5f1e8;border-radius:10px;padding:4px 8px}.progress-track{height:7px;background:#eee9df;border-radius:10px;overflow:hidden;margin-top:10px}.progress-fill{height:100%;background:#b49a61;border-radius:10px}.progress-meta{margin-top:8px;color:#888;font-size:14px;line-height:1.5}
+@media(max-width:380px){.report-summary{grid-template-columns:1fr 1fr}.summary-item.primary{grid-column:1/-1}.attendance-report-row{grid-template-columns:1fr}.attendance-badges{justify-content:flex-start}.report-hero{padding:15px}.report-card{padding:14px}}
+.progress-stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;font-size:14px}.progress-stats span{background:#f5f1e8;border-radius:10px;padding:6px 9px}.progress-stats b{font-weight:700}</style>
+<style>
+.attendance-icons{display:flex;justify-content:center;gap:16px;margin:18px 0 24px}.att-icon{position:relative;width:58px;height:58px;border:1px solid #ddd7c9;border-radius:18px;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#18253A;transition:.18s;box-shadow:0 3px 10px rgba(24,37,58,.06)}.att-icon:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(24,37,58,.13);border-color:#b49a61}.att-icon:focus-visible{outline:3px solid rgba(180,154,97,.3);outline-offset:3px}.att-icon svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.att-icon[data-label]:hover::after{content:attr(data-label);position:absolute;bottom:-34px;left:50%;transform:translateX(-50%);background:#18253A;color:#fff;padding:5px 9px;border-radius:7px;font-family:'Sakkal Majalla',serif;font-size:15px;white-space:nowrap;z-index:20}.att-icon.active{background:#f5f1e8;border-color:#b49a61;color:#8b713b}@media(max-width:600px){.att-icon:focus-visible::after,.att-icon:active::after{content:attr(data-label);position:absolute;bottom:-34px;left:50%;transform:translateX(-50%);background:#18253A;color:#fff;padding:5px 9px;border-radius:7px;font-family:'Sakkal Majalla',serif;font-size:15px;white-space:nowrap;z-index:20}}
+.mode-tabs{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:12px 0}.mode{border:1px solid #ddd5c6;background:#fff;color:#17253b}.mode.active{background:#17253b;color:#fff;border-color:#17253b}.mode:focus{outline:2px solid #b49a61;outline-offset:2px}
+.report-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:12px}.report-stat{background:#faf7ef;border:1px solid #e8dfcf;border-radius:13px;padding:9px 5px;text-align:center}.report-stat b{display:block;font-size:20px}.report-stat span{font-size:11px;color:#777}.report-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #eee8de}.report-row:last-child{border-bottom:0}.mode-tabs .mode{font-family:inherit}@media(max-width:360px){.report-grid{grid-template-columns:repeat(2,1fr)}}.progress-stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;font-size:14px}.progress-stats span{background:#f5f1e8;border-radius:10px;padding:6px 9px}.progress-stats b{font-weight:700}</style>
+<style>
+/* تحسين تنسيق تقارير الحضور */
+.report-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:18px 0 14px;direction:rtl}
+.report-stat{background:#faf8f3;border:1px solid #e5dccb;border-radius:15px;padding:11px 6px 10px;text-align:center;min-height:70px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;box-shadow:0 2px 8px rgba(23,37,59,.035)}
+.report-stat b{display:block;font-size:23px;line-height:1.05;font-weight:700;color:#17253b}
+.report-stat span{font-size:14px;line-height:1.2;color:#6d6d6d}
+.report-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 2px;border-bottom:1px solid #eee8de;font-size:18px;line-height:1.35}
+.report-row:last-child{border-bottom:0}
+.report-row>span:first-child{font-weight:600;color:#17253b;min-width:0}
+.report-row .tag{font-size:14px;padding:5px 10px;border-radius:999px;white-space:nowrap;line-height:1.1}
+#attendanceReport .card{padding:18px 16px}
+#attendanceReport .card>.row{padding-bottom:4px}
+#attendanceReport .card>.row b{font-size:21px;line-height:1.35}
+#attendanceReport #reportDateLabel{font-size:15px;color:#8a8173;white-space:nowrap}
+#attendanceTotals{margin-top:10px}
+#attendanceTotals>p{margin:0 0 8px;padding:11px 13px;background:#f7f4ed;border:1px solid #ebe2d3;border-radius:13px;font-size:16px;line-height:1.55;color:#6c6c6c}
+#attendanceTotals>p b{color:#17253b;font-size:18px}
+#attendanceTotals .report-row{font-size:16px;padding:11px 2px}
+#attendanceTotals .report-row .muted{font-size:14px;white-space:nowrap}
+@media(max-width:380px){.report-grid{gap:6px}.report-stat{padding:9px 3px}.report-stat b{font-size:21px}.report-stat span{font-size:13px}.report-row{font-size:17px}.report-row .tag{font-size:13px;padding:5px 8px}}
+.progress-stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;font-size:14px}.progress-stats span{background:#f5f1e8;border-radius:10px;padding:6px 9px}.progress-stats b{font-weight:700}</style><style>
+.attendance-total-box{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:8px;margin:16px 0 10px;padding:12px;background:#f7f4ed;border:1px solid #e6ddcd;border-radius:16px;text-align:center}
+.attendance-total-box>div{min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px}
+.attendance-total-box>div+div{border-right:1px solid #e1d8c8}
+.attendance-total-box .total-label{font-size:14px;color:#7b756c;line-height:1.25}
+.attendance-total-box strong{font-size:22px;color:#17253b;line-height:1.15;font-weight:700}
+.attendance-total-box strong small{font-size:14px;font-weight:400;color:#777}
+.attendance-total-box .total-unit{font-size:12px;color:#8a8173}
+.attendance-total-row{padding:14px 2px;font-size:18px}
+.attendance-counts{color:#777;font-size:16px;white-space:nowrap}
+.attendance-counts b{color:#17253b;font-size:18px;font-weight:700}
+@media(max-width:380px){.attendance-total-box{gap:4px;padding:10px 6px}.attendance-total-box .total-label{font-size:13px}.attendance-total-box strong{font-size:20px}.attendance-total-row{font-size:17px}.attendance-counts{font-size:14px}.attendance-counts b{font-size:16px}}
+
+.student-clickable{cursor:pointer;transition:.18s ease}.student-clickable:hover{border-color:#d9ccb2;background:#fffdfa;transform:translateY(-1px);box-shadow:0 8px 18px rgba(23,37,59,.06)}.student-clickable:focus{outline:2px solid #b49a61;outline-offset:2px}.record-hero{background:linear-gradient(135deg,#f8f5ee,#fff);border:1px solid #e6ddcf;border-radius:20px;padding:16px;margin-bottom:12px}.record-title{display:flex;align-items:center;gap:12px}.record-avatar{width:48px;height:48px;border-radius:15px;background:#eee3c9;display:grid;place-items:center;font-weight:700;font-size:21px;color:#17253b}.record-title h2{margin:0;font-size:25px}.record-title p{margin:3px 0 0;color:#888;font-size:14px}.record-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:14px}.record-stat{background:#fff;border:1px solid #e8dfd2;border-radius:14px;padding:10px;text-align:center}.record-stat strong{display:block;font-size:21px;color:#17253b;line-height:1.1}.record-stat span{display:block;font-size:13px;color:#888;margin-top:3px}.record-section{background:#fff;border:1px solid #e6ddcf;border-radius:18px;padding:14px;margin-bottom:10px}.record-section h3{margin:0 0 10px;font-size:21px}.record-list{display:flex;flex-direction:column;gap:10px;max-height:520px;overflow-y:auto;padding:2px 4px 4px 2px;scrollbar-width:thin;scrollbar-color:#b8aa8e #f4f0e7}.record-list::-webkit-scrollbar{width:7px}.record-list::-webkit-scrollbar-track{background:#f4f0e7;border-radius:10px}.record-list::-webkit-scrollbar-thumb{background:#b8aa8e;border-radius:10px}.record-item{border:1px solid #eee7dc;border-radius:14px;padding:11px 13px;background:#fffdf9;min-height:88px;box-sizing:border-box;flex:0 0 88px}.record-item .top{display:flex;justify-content:space-between;align-items:center;gap:8px}.record-item .type{font-weight:700;color:#17253b;font-size:17px}.record-item .date{min-height:auto;display:block;color:#8a754d;font-size:13px}.record-item .detail{margin-top:5px;color:#666;font-size:15px;line-height:1.5}.record-empty{color:#999;font-size:15px;text-align:center;padding:12px}.record-tag{display:inline-flex;align-items:center;background:#f5f1e8;color:#8a754d;border-radius:999px;padding:3px 8px;font-size:12px}
+.record-section-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}.record-section-head h3{margin:0}.record-count{font-size:13px;color:#8a754d;background:#f5f1e8;border-radius:999px;padding:4px 8px}.progress-item.student-clickable{cursor:pointer}.progress-item.student-clickable:focus{outline:2px solid #b49a61;outline-offset:2px}.progress-stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;font-size:14px}.progress-stats span{background:#f5f1e8;border-radius:10px;padding:6px 9px}.progress-stats b{font-weight:700}</style>
+<style>
+/* الصفحة الرئيسية: بطاقات الأيقونات 2×2 */
+#home .icons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:18px 0 24px}
+#home .icons .icon{min-height:145px;padding:16px 10px;border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:#fff;border:1px solid #e3dccf;box-shadow:0 6px 18px rgba(23,37,59,.06);font-size:20px}
+#home .icons .home-icon-refined{width:82px!important;height:82px!important;min-width:82px!important;min-height:82px!important;border-radius:20px!important;background:#f5f0e6;border:1px solid #e5dccf}
+#home .icons .home-icon-refined svg{width:38px!important;height:38px!important;stroke:#17253b;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:360px){#home .icons{gap:12px}#home .icons .icon{min-height:130px;font-size:18px}#home .icons .home-icon-refined{width:72px!important;height:72px!important;min-width:72px!important;min-height:72px!important}}
+</style>
+<style>
+/* تنسيق التاريخ الرئيسي */
+.datebox{
+  padding:22px 28px;
+  margin-bottom:20px;
+  border-radius:26px;
+  background:linear-gradient(135deg,#16243a 0%,#1f304b 100%);
+  box-shadow:0 10px 26px rgba(23,37,59,.12);
+}
+.date-layout{
+  display:grid;
+  grid-template-columns:150px 1fr;
+  align-items:stretch;
+  gap:28px;
+  min-height:124px;
+}
+.day-wrap{
+  width:150px;
+  min-width:150px;
+  padding-right:24px;
+  border-left:1px solid rgba(238,227,201,.22);
+  text-align:right;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+}
+.day-label{
+  font-size:16px;
+  font-weight:500;
+  color:#cfc5ad;
+  margin-bottom:6px;
+  line-height:1.1;
+}
+.datebox .day{
+  font-size:32px;
+  font-weight:800;
+  color:#eee3c9;
+  margin:0;
+  line-height:1.05;
+  white-space:nowrap;
+}
+.dates-wrap{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  text-align:right;
+  direction:rtl;
+}
+.datebox .h,.datebox .g{
+  font-size:21px;
+  font-weight:700;
+  line-height:1.15;
+  height:43px;
+  display:flex;
+  align-items:center;
+  white-space:nowrap;
+  color:#fff;
+  margin:0;
+  padding:0;
+  width:100%;
+  min-width:0;
+  justify-content:flex-start;
+}
+.datebox .h span,.datebox .g span{
+  display:block;
+  width:100%;
+  text-align:right;
+}
+.datebox .h{border-bottom:1px solid rgba(238,227,201,.20)}
+.datebox .g{padding-top:0}
+@media(max-width:360px){
+  .datebox{padding:19px 18px}
+  .date-layout{grid-template-columns:108px 1fr;gap:18px;min-height:110px}
+  .day-wrap{width:108px;min-width:108px;padding-right:17px}
+  .day-label{font-size:14px}
+  .datebox .day{font-size:27px}
+  .datebox .h,.datebox .g{font-size:18px;height:39px}
+}
+</style><style>
+/* ضبط نهائي لرأس الصفحة وبطاقات الرئيسية */
+.head .logo{font-size:32px!important;line-height:1.05!important}
+.head .circle-name{font-size:21px!important;line-height:1.2!important;margin-top:4px!important}
+#home .icons{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px}
+#home .icons .icon{height:152px!important;min-height:152px!important;padding:14px 8px!important;border-radius:20px!important;font-size:20px!important;gap:10px!important}
+#home .icons .home-icon-refined{width:76px!important;height:76px!important;min-width:76px!important;min-height:76px!important;border-radius:20px!important}
+#home .icons .home-icon-refined svg{width:36px!important;height:36px!important}
+.datebox{min-height:124px!important;border-radius:24px!important}
+@media(max-width:360px){
+ #home .icons .icon{height:140px!important;min-height:140px!important;font-size:18px!important}
+ #home .icons .home-icon-refined{width:70px!important;height:70px!important;min-width:70px!important;min-height:70px!important}
+}
+
+.activity-multi .mode{transition:.18s ease;}
+.activity-multi .mode.active{background:#18283f!important;color:#fff!important;border-color:#18283f!important;box-shadow:0 8px 18px rgba(24,40,63,.12);}
+.activity-help{margin-top:8px;text-align:center;font-size:14px;}
+.surah-scope{margin-top:12px;padding:12px;border:1px solid #e5dccb;border-radius:16px;background:#fbf9f4}.scope-title{font-weight:700;margin-bottom:8px}.scope-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px}.scope-btn{border:1px solid #d9ceb9;background:#fff;border-radius:12px;padding:10px;font-family:inherit;font-weight:700;color:#18273f;cursor:pointer}.scope-btn.active{background:#18273f;color:#fff;border-color:#18273f}.scope-btn:disabled{opacity:.45;cursor:not-allowed}</style><style id="schedule-fix-style">.schedule-note{margin:10px 0 14px;padding:11px 14px;border:1px solid #e4dac7;border-radius:14px;background:#faf7f0;color:#18273f;text-align:center;font-size:17px;line-height:1.6}.schedule-note strong{color:#9a7b3f}.cal-legend{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.cal-legend span{padding:5px 9px;border-radius:9px;font-size:14px}.cal-circle{background:#f5f0e4;color:#18273f}.cal-off{background:#f7f7f7;color:#8a8a8a}.cal-today{outline:2px solid #b49a61;outline-offset:-2px}.date-cell{min-height:38px;display:flex;align-items:center;justify-content:center;border-radius:10px;font-size:17px}.date-cell.empty{visibility:hidden}.date-cell.circle-day{background:#f5f0e4}.date-cell.off-day{opacity:.55}</style><style id="surah-gap-fix">.surah-picker{display:flex!important;flex-direction:column!important;gap:10px!important;padding:8px!important}.surah-picker .surah-option{margin:0!important;border:1px solid #ebe5da!important;border-radius:14px!important;flex:0 0 auto!important}</style><style id="settings-style">
+.settings-icon{max-width:none}
+.settings-card{padding:20px}
+.settings-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0;border-bottom:1px solid #eee7dc}
+.settings-row:last-child{border-bottom:0}
+.settings-title{font-size:20px;font-weight:700;color:#18273f}
+.settings-sub{font-size:15px;color:#8b8b8b;margin-top:4px}
+.settings-add{display:flex;gap:10px;align-items:center;margin-top:16px}
+.settings-add input{flex:1;min-width:0}
+.settings-student-count{font-size:15px;color:#8b8b8b;margin-top:14px}.settings-student-list{display:flex;flex-direction:column;gap:8px;margin-top:10px;height:220px;max-height:220px;overflow-y:auto;padding:10px;background:#faf8f3;border:1px solid #e1d7c7;border-radius:16px;scrollbar-width:thin;scrollbar-color:#b8aa8e #eee9df}.settings-student-list::-webkit-scrollbar{width:6px}.settings-student-list::-webkit-scrollbar-track{background:#f4f0e7;border-radius:10px}.settings-student-list::-webkit-scrollbar-thumb{background:#b8aa8e;border-radius:10px}.settings-student-list::-webkit-scrollbar-thumb:hover{background:#9d8b6a}.settings-student-row{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:58px;padding:8px 10px;border:1px solid #ebe4d8;border-radius:13px;background:#fff}.settings-student-name{font-size:18px;color:#18273f;font-weight:700;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.settings-student-actions{display:flex;gap:6px;flex-shrink:0}.settings-edit,.settings-delete{width:auto;border:0;border-radius:9px;padding:6px 10px;font:inherit;cursor:pointer}.settings-edit{background:#f3eee3;color:#18273f}.settings-delete{background:#f5e9dc;color:#9a6f38}@media(max-width:520px){.settings-student-row{align-items:center;flex-direction:row}.settings-student-actions{justify-content:flex-end}}
+@media(max-width:520px){.settings-icon{max-width:none}.settings-add{flex-direction:column;align-items:stretch}}
+</style><style id="quotes-style">.home-quotes{margin:2px 0 22px;border:1px solid #e4ded4;border-radius:20px;background:#fbf9f4;padding:20px 18px;text-align:center;min-height:118px;display:flex;align-items:center;justify-content:center}.home-quotes .quote-text{font-size:21px;line-height:1.75;color:#6f6250;margin:0}.home-quotes.empty .quote-text{color:#b3ab9f;font-size:17px}.settings-quotes{margin-top:18px}.quote-add{display:flex;gap:10px;align-items:center;margin-top:12px}.quote-add textarea{flex:1;min-width:0;resize:vertical;min-height:70px;border:1px solid #e0d6c5;border-radius:14px;padding:10px 12px;font:inherit;font-size:17px;color:#17253b;background:#fff}.quote-add button{white-space:nowrap}.quote-list{margin-top:12px;display:flex;flex-direction:column;gap:8px;max-height:260px;overflow:auto}.quote-row{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid #ebe4d8;border-radius:14px;padding:10px 12px;background:#fff}.quote-row span{font-size:16px;color:#5f584d;line-height:1.5}.quote-delete{border:0;background:#f2eadb;color:#9a7b3f;border-radius:10px;padding:6px 10px;font:inherit;cursor:pointer}@media(max-width:520px){.quote-add{flex-direction:column;align-items:stretch}.quote-add button{width:100%}}</style>
+<style id="home-icon-polish">
+#home .icons .home-icon-refined{width:66px!important;height:66px!important;min-width:66px!important;min-height:66px!important;border-radius:17px!important}
+#home .icons .home-icon-refined svg{width:32px!important;height:32px!important;stroke-width:1.8!important}
+#home .icons .icon{height:148px!important;min-height:148px!important}
+</style>
+
+
+
+<style id="home-icons-final">
+#home .icons{gap:22px 18px!important;margin:18px 0 24px!important}
+#home .icons .icon{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  height:150px!important;
+  min-height:150px!important;
+  padding:8px!important;
+  border-radius:18px!important;
+  gap:10px!important;
+}
+#home .icons .icon:hover{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  transform:translateY(-1px)!important;
+}
+#home .icons .home-icon-refined{
+  width:92px!important;
+  height:92px!important;
+  min-width:92px!important;
+  min-height:92px!important;
+  border-radius:24px!important;
+  background:#f5f0e6!important;
+  border:1px solid #e2d7c3!important;
+  box-shadow:0 3px 10px rgba(23,37,59,.035)!important;
+}
+#home .icons .home-icon-refined svg{
+  width:40px!important;
+  height:40px!important;
+  stroke:#17253b!important;
+  stroke-width:1.8!important;
+}
+#home .icons .icon > :last-child{
+  font-size:21px!important;
+  font-weight:700!important;
+  line-height:1.1!important;
+}
+@media(max-width:360px){
+  #home .icons{gap:16px 12px!important}
+  #home .icons .icon{height:142px!important;min-height:142px!important}
+  #home .icons .home-icon-refined{width:84px!important;height:84px!important;min-width:84px!important;min-height:84px!important}
+  #home .icons .home-icon-refined svg{width:36px!important;height:36px!important}
+}
+</style>
+<style id="settings-cleanup">#settings button:empty{display:none!important}</style>
+<style id="settings-polish">
+/* الصفحة الرئيسية فقط تحمل اسم الحلقة والتاريخ */
+.settings-card{padding:22px 20px 20px;background:#fffdf9;border-color:#e2d8c8;box-shadow:0 8px 24px rgba(23,37,59,.055)}
+.settings-card .row{padding-bottom:15px;border-bottom:1px solid #e8e0d3}
+.settings-title{font-size:22px;line-height:1.25;color:#17253b;font-weight:800}
+.settings-sub{font-size:15px;color:#8a8a8a;margin-top:5px;line-height:1.4}
+.settings-row{padding:18px 0 12px}
+.settings-add,.quote-add{display:grid;grid-template-columns:minmax(0,1fr) 132px;gap:10px;align-items:center}
+.settings-add input,.quote-add textarea{min-height:48px;padding:10px 13px;border:1px solid #ddd2c0;border-radius:13px;font-family:inherit;font-size:16px;background:#fff}
+.settings-add button,.quote-add button{min-height:48px;padding:9px 12px;border-radius:13px;font-family:inherit;font-size:16px}
+#settingsStudentList{display:grid;gap:9px;margin-top:12px!important}
+#settingsStudentList .card,.settings-student-item{margin:0!important;padding:11px 13px!important;border:1px solid #e5ddcf!important;border-radius:14px!important;background:#fff!important;box-shadow:none!important}
+.settings-quotes{margin-top:8px;border-top:1px solid #e8e0d3}
+.quote-add{grid-template-columns:minmax(0,1fr) 96px}
+.quote-add textarea{resize:none;min-height:48px;height:48px}
+.quote-list{display:grid;gap:9px;margin-top:11px}
+.quote-list>*{border:1px solid #e5ddcf!important;border-radius:14px!important;background:#fff!important}
+@media(max-width:360px){.settings-add{grid-template-columns:1fr 112px}.quote-add{grid-template-columns:1fr 88px}.settings-title{font-size:20px}}
+</style>
+<style id="student-list-final-fix">
+#settingsStudentList .settings-student-list{height:220px!important;max-height:220px!important;overflow-y:auto!important;overflow-x:hidden!important;padding:10px!important;display:flex!important;flex-direction:column!important;gap:9px!important;border:1px solid #ddd2c0!important;border-radius:16px!important;background:#faf8f3!important;scrollbar-width:thin!important;scrollbar-color:#9f927b #eee9df!important}
+#settingsStudentList .settings-student-row{flex:0 0 58px!important;min-height:58px!important;width:100%!important;border:1px solid #e3dacb!important;border-radius:13px!important;background:#fff!important;padding:8px 12px!important}
+#settingsStudentList .settings-student-list::-webkit-scrollbar{width:7px!important}
+#settingsStudentList .settings-student-list::-webkit-scrollbar-track{background:#eee9df!important;border-radius:10px!important}
+#settingsStudentList .settings-student-list::-webkit-scrollbar-thumb{background:#9f927b!important;border-radius:10px!important}
+</style><style id="settings-add-final-fix">
+/* توحيد قياسات حقول وأزرار الإضافة في الإعدادات */
+#settings .settings-add,
+#settings .quote-add{
+  display:grid!important;
+  align-items:stretch!important;
+  gap:10px!important;
+  margin-top:14px!important;
+}
+#settings .settings-add{grid-template-columns:minmax(0,1fr) 100px!important}
+#settings .quote-add{grid-template-columns:minmax(0,1fr) 100px!important}
+#settings .settings-add input,
+#settings .settings-add button,
+#settings .quote-add textarea,
+#settings .quote-add button{
+  width:100%!important;
+  height:50px!important;
+  min-height:50px!important;
+  max-height:50px!important;
+  margin:0!important;
+  box-sizing:border-box!important;
+  border-radius:14px!important;
+}
+#settings .quote-add textarea{resize:none!important;padding:10px 13px!important;line-height:1.4!important}
+#settings .settings-add button,
+#settings .quote-add button{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  padding:8px 12px!important;
+  white-space:nowrap!important;
+}
+@media(max-width:520px){
+  #settings .settings-add,
+  #settings .quote-add{display:grid!important;align-items:stretch!important}
+  #settings .settings-add{grid-template-columns:minmax(0,1fr) 100px!important}
+  #settings .quote-add{grid-template-columns:minmax(0,1fr) 100px!important}
+}
+</style></head><body><main class="app"><section id="home" class="show"><div class="head"><div><div class="logo">حلقة</div><div class="circle-name">( وعجلت إليك ربي لترضى )</div></div></div><div class="datebox"><div class="date-layout"><div class="day-wrap"><div class="day-label">اليوم</div><div class="day" id="dayDate"></div></div><div class="dates-wrap"><div class="h" id="hijriDate"></div><div class="g" id="gregDate"></div></div></div></div><div class="icons"><button class="icon" onclick="show('attendance')"><span class="svgicon home-icon-refined"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/><path d="m8 12 2.5 2.5L16 9"/></svg></span>الحضور</button><button class="icon" onclick="show('reports')"><span class="svgicon home-icon-refined"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V9M12 19V5M19 19v-7"/></svg></span>التقارير</button><button class="icon" onclick="show('calendarPanel')"><span class="svgicon home-icon-refined"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16M8 13h3M13 13h3M8 17h3"/></svg></span>التقويم</button><button class="icon settings-icon" onclick="show('settings')"><span class="svgicon home-icon-refined"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="9" cy="7" r="1.8" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="1.8" fill="currentColor" stroke="none"/><circle cx="10" cy="17" r="1.8" fill="currentColor" stroke="none"/></svg></span>الإعدادات</button></div><div id="homeQuotes" class="home-quotes empty"><p class="quote-text">لا توجد اقتباسات مضافة بعد</p></div></section><section id="calendarPanel" class="panel"><button class="smallbtn back" onclick="show('home')">← العودة إلى الرئيسية</button><div class="card"><div class="calhead"><b>تقويم الحلقة</b><span class="muted" id="monthTitle"></span></div><div class="days"><b>الأحد</b><b>الاثنين</b><b>الثلاثاء</b><b>الأربعاء</b><b>الخميس</b><b>الجمعة</b><b>السبت</b></div><div class="dates" id="dates"></div></div></section><section id="attendance" class="panel"><button class="smallbtn back" onclick="show('home')">← العودة إلى الرئيسية</button><div class="card"><b>تسجيل الحضور</b><p class="muted"></p><select id="who"><option value="">لا توجد طالبات مضافة</option></select><div class="attendance-icons" role="group" aria-label="حالة الحضور">
+<button type="button" class="att-icon" data-label="حضور" aria-label="حضور" onclick="setAttendance('حاضر')"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 2.6 2.6L16.5 9"/></svg></button>
+<button type="button" class="att-icon" data-label="اعتذار" aria-label="اعتذار" onclick="setAttendance('اعتذار')"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></button>
+<button type="button" class="att-icon" data-label="غياب" aria-label="غياب" onclick="setAttendance('غياب')"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6M15 9l-6 6"/></svg></button>
+</div></div><div class="card"><div class="activity-card-title"><b>تسجيل ورد اليوم</b></div><div class="mode-tabs activity-multi" style="grid-template-columns:repeat(4,1fr)"><button type="button" id="activityHifz" class="mode active" onclick="setActivityMode('hifz')">حفظ</button><button type="button" id="activityReview" class="mode" onclick="setActivityMode('review')">مراجعة</button><button type="button" id="activityTest" class="mode" onclick="setActivityMode('test')">اختبار</button><button type="button" id="activitySard" class="mode" onclick="setActivityMode('sard')">سرد</button></div><div id="surahMode"><label class="muted" id="surahLabel">اختيار السورة</label><input id="surahSearch" type="search" placeholder="ابحثي عن السورة..." aria-label="البحث عن السورة"><div id="selectedSurahs" class="selected-surahs" aria-live="polite"></div><div id="surahScope" class="surah-scope" style="display:none"><div class="scope-title">نطاق السورة</div><div class="scope-tabs"><button type="button" id="scopeFull" class="scope-btn active" onclick="setSurahScope('full')">السورة كاملة</button><button type="button" id="scopeAyahs" class="scope-btn" onclick="setSurahScope('ayahs')">من آية إلى آية</button></div><div id="ayahRange" class="formgrid" style="display:none"><div><label class="muted">من آية</label><input id="ayahFrom" type="number" min="1" placeholder="مثال: 1"></div><div><label class="muted">إلى آية</label><input id="ayahTo" type="number" min="1" placeholder="مثال: 10"></div></div><div id="ayahHint" class="muted" style="margin-top:7px"></div></div><div id="surahPicker" class="surah-picker" role="listbox" aria-multiselectable="true" aria-label="اختيار سورة أو عدة سور"></div></div><button type="button" class="smallbtn add-action" onclick="addPendingActivity()" id="addActivityBtn"><span class="add-icon" aria-hidden="true">+</span><span>إضافة</span></button><div id="pendingActivities" class="pending-activities" aria-live="polite"></div><button class="primary" onclick="saveActivity()" id="saveActivityBtn">تسجيل ورد اليوم</button></div></section><section id="settings" class="panel"><button class="smallbtn back" onclick="show('home')">← العودة إلى الرئيسية</button><div class="card settings-card"><div class="row"><div><b class="settings-title">الإعدادات</b></div></div><div class="settings-row"><div><div class="settings-title">إضافة اسم</div><div class="settings-sub">إضافة اسم جديد إلى الحلقة</div></div></div><div class="settings-add"><input id="settingsStudentName" type="text" placeholder="الاسم"><button type="button" class="primary" onclick="addStudentFromSettings()">إضافة</button></div><div id="settingsStudentList" class="muted" style="margin-top:14px"></div><div class="settings-row settings-quotes"><div><div class="settings-title">الاقتباسات</div><div class="settings-sub">إضافة اقتباس ليظهر في الصفحة الرئيسية</div></div></div><div class="quote-add"><textarea id="settingsQuoteText" placeholder="اكتبي الاقتباس هنا"></textarea><button type="button" class="primary" onclick="addQuoteFromSettings()">إضافة</button></div><div id="settingsQuoteList" class="quote-list"></div></div></section><section id="students" class="panel"><button class="smallbtn back" onclick="show('home')">← العودة إلى الرئيسية</button><div id="studentCards"></div></section><section id="studentRecord" class="panel"><button class="smallbtn back" onclick="show('students')">← العودة إلى الطالبات</button><div id="studentRecordContent"></div></section><section id="reports" class="panel"><button class="smallbtn back" onclick="show('home')">← العودة إلى الرئيسية</button><div class="report-hero"><div><div class="report-kicker">لوحة التقارير</div><h2>التقارير</h2><p>ملخص واضح للحضور وتقدم كل طالبة.</p></div><div class="report-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V9M12 19V5M19 19v-7"/></svg></div></div><div class="report-tabs"><button type="button" id="reportAttendanceTab" class="report-tab active" onclick="setReportMode('attendance')"><span class="tab-icon">✓</span><span>الحضور</span></button><button type="button" id="reportProgressTab" class="report-tab" onclick="setReportMode('progress')"><span class="tab-icon">◷</span><span>تقدم الطالبات</span></button></div><div id="attendanceReport"><div class="report-card"><div class="report-card-head"><div><h3>إجمالي الحضور</h3><p id="reportDateLabel">ملخص الحلقة</p></div><span class="report-period">حتى اليوم</span></div><div id="attendanceSummary" class="report-summary"></div><div class="section-label">تفاصيل الطالبات</div><div id="attendanceRows" class="attendance-report-list"></div></div></div><div id="progressReport" style="display:none"><div class="report-card"><div class="report-card-head"><div><h3>تقدم الطالبات</h3><p>آخر موضع في الحفظ، والمراجعات والاختبارات المسجلة.</p></div></div><div id="progressReportCards" class="progress-report-list"></div></div></div></section></main><script>
+let students=[];
+function refreshStudents(){try{const d=load();students=Array.isArray(d.students)?d.students:[]}catch(e){students=[]}renderStudentOptions();renderSettingsStudentList();}
+function addStudentFromSettings(){const input=document.getElementById('settingsStudentName'); if(!input)return; const name=(input.value||'').trim(); if(!name){alert('اكتبي الاسم أولاً');return;} if(students.includes(name)){alert('الاسم مضاف مسبقًا');return;} students.push(name); const d=load(); d.students=students.slice(); save(d); input.value=''; refreshStudents(); renderStudents(); renderReports(); renderSettingsStudentList(); alert('تمت إضافة الطالبة');}
+function addQuoteFromSettings(){const input=document.getElementById('settingsQuoteText');if(!input)return;const text=(input.value||'').trim();if(!text){alert('اكتبي الاقتباس أولاً');return;}const d=load();d.quotes=Array.isArray(d.quotes)?d.quotes:[];d.quotes.push(text);save(d);input.value='';renderQuotes();renderSettingsQuoteList();} function deleteQuote(i){const d=load();d.quotes=Array.isArray(d.quotes)?d.quotes:[];d.quotes.splice(i,1);save(d);renderQuotes();renderSettingsQuoteList();} function renderSettingsQuoteList(){const el=document.getElementById('settingsQuoteList');if(!el)return;const d=load(),qs=Array.isArray(d.quotes)?d.quotes:[];el.innerHTML=qs.length?qs.map((q,i)=>`<div class="quote-row"><span>${q}</span><button type="button" class="quote-delete" onclick="deleteQuote(${i})">حذف</button></div>`).join(''):'<div class="muted">لا توجد اقتباسات مضافة.</div>';} function renderQuotes(){const el=document.getElementById('homeQuotes');if(!el)return;const d=load(),qs=Array.isArray(d.quotes)?d.quotes:[];if(!qs.length){el.classList.add('empty');el.innerHTML='<p class="quote-text">لا توجد اقتباسات مضافة بعد</p>';return;}el.classList.remove('empty');const q=qs[new Date().getDate()%qs.length];el.innerHTML=`<p class="quote-text">“ ${q} ”</p>`;} 
+function renderSettingsStudentList(){const el=document.getElementById('settingsStudentList'); if(!el)return; if(!students.length){el.innerHTML='<div class="muted">لا توجد أسماء مضافة بعد</div>';return;} el.innerHTML=`<div class="settings-student-count">عدد الأسماء: ${arNums(students.length)}</div><div class="settings-student-list">${students.map((n,i)=>`<div class="settings-student-row"><span class="settings-student-name">${n}</span><div class="settings-student-actions"><button type="button" class="settings-edit" onclick="editStudent(${i})">تعديل</button><button type="button" class="settings-delete" onclick="deleteStudent(${i})">حذف</button></div></div>`).join('')}</div>`;}
+function renameStudentInStore(obj,oldName,newName){if(!obj||typeof obj!=='object')return;Object.keys(obj).forEach(k=>{if(obj[k]&&typeof obj[k]==='object'&&!Array.isArray(obj[k])){if(Object.prototype.hasOwnProperty.call(obj[k],oldName)){obj[k][newName]=obj[k][oldName];delete obj[k][oldName];}renameStudentInStore(obj[k],oldName,newName);}});}
+function renameStudentData(d,oldName,newName){['attendance','hifzHistory','review','tests','sard'].forEach(k=>renameStudentInStore(d[k],oldName,newName));if(d.progress&&Object.prototype.hasOwnProperty.call(d.progress,oldName)){d.progress[newName]=d.progress[oldName];delete d.progress[oldName];}}
+function deleteStudentData(d,name){['attendance','hifzHistory','review','tests','sard'].forEach(k=>{const obj=d[k];if(!obj||typeof obj!=='object')return;Object.keys(obj).forEach(date=>{if(obj[date]&&typeof obj[date]==='object'){delete obj[date][name];}});});if(d.progress&&typeof d.progress==='object')delete d.progress[name];}
+function editStudent(i){const oldName=students[i];if(oldName===undefined)return;const newName=prompt('عدّلي الاسم:',oldName);if(newName===null)return;const name=newName.trim();if(!name)return alert('اكتبي الاسم.');if(name===oldName)return;if(students.includes(name))return alert('هذا الاسم مضاف مسبقًا.');const d=load();renameStudentData(d,oldName,name);students[i]=name;d.students=students.slice();save(d);refreshStudents();renderStudents();renderReports();}
+function deleteStudent(i){const name=students[i];if(name===undefined)return;if(!confirm(`هل تريدين حذف الاسم «${name}»؟\nسيتم حذف بيانات حضورها وسجل حفظها ومراجعتها واختباراتها وسردها.`))return;const d=load();deleteStudentData(d,name);students.splice(i,1);d.students=students.slice();save(d);refreshStudents();renderStudents();renderReports();}
+function renderStudentOptions(){const sel=document.getElementById('who'); if(!sel)return; if(!students.length){sel.innerHTML='<option value="">لا توجد طالبات مضافة</option>';sel.disabled=true;}else{sel.disabled=false;sel.innerHTML=students.map(n=>`<option value="${n.replace(/\"/g,'&quot;')}">${n}</option>`).join('');}}
+
+const names=['الفاتحة','البقرة','آل عمران','النساء','المائدة','الأنعام','الأعراف','الأنفال','التوبة','يونس','هود','يوسف','الرعد','إبراهيم','الحجر','النحل','الإسراء','الكهف','مريم','طه','الأنبياء','الحج','المؤمنون','النور','الفرقان','الشعراء','النمل','القصص','العنكبوت','الروم','لقمان','السجدة','الأحزاب','سبأ','فاطر','يس','الصافات','ص','الزمر','غافر','فصلت','الشورى','الزخرف','الدخان','الجاثية','الأحقاف','محمد','الفتح','الحجرات','ق','الذاريات','الطور','النجم','القمر','الرحمن','الواقعة','الحديد','المجادلة','الحشر','الممتحنة','الصف','الجمعة','المنافقون','التغابن','الطلاق','التحريم','الملك','القلم','الحاقة','المعارج','نوح','الجن','المزمل','المدثر','القيامة','الإنسان','المرسلات','النبأ','النازعات','عبس','التكوير','الانفطار','المطففين','الانشقاق','البروج','الطارق','الأعلى','الغاشية','الفجر','البلد','الشمس','الليل','الضحى','الشرح','التين','العلق','القدر','البينة','الزلزلة','العاديات','القارعة','التكاثر','العصر','الهمزة','الفيل','قريش','الماعون','الكوثر','الكافرون','النصر','المسد','الإخلاص','الفلق','الناس'];
+const ayahs=[7,286,200,176,120,165,206,75,129,109,123,111,43,52,99,128,111,110,98,135,112,78,118,64,77,227,93,88,69,60,34,30,73,54,45,83,182,88,75,85,54,53,89,59,37,35,38,29,18,45,60,49,62,55,78,96,29,22,24,13,14,11,11,18,12,12,30,52,52,44,28,28,20,56,40,31,50,40,46,42,29,19,36,25,22,17,19,26,30,20,15,21,11,8,5,8,19,5,8,8,11,11,8,3,9,5,4,7,3,6,3,5,4,5,6];
+function arNums(value){return String(value);}
+function updateTodayDate(){const now=new Date();const day=new Intl.DateTimeFormat('ar-SA-u-nu-latn',{weekday:'long'}).format(now);const greg=new Intl.DateTimeFormat('ar-SA-u-ca-gregory-nu-latn',{day:'numeric',month:'long',year:'numeric'}).format(now).replace(/\s*[مﻡ]\s*$/,'');const hijri=new Intl.DateTimeFormat('ar-SA-u-ca-islamic-umalqura-nu-latn',{day:'numeric',month:'long',year:'numeric'}).format(now).replace(/\s*هـ\s*$/,'');const d=document.getElementById('dayDate'),g=document.getElementById('gregDate'),h=document.getElementById('hijriDate');if(d)d.textContent=day;if(g)g.innerHTML='<span>'+greg+' م</span>';if(h)h.innerHTML='<span>'+hijri+' هـ</span>';}
+updateTodayDate();
+function key(){return new Date().toISOString().slice(0,10)}
+function load(){try{return JSON.parse(localStorage.getItem('mueenData')||'{}')}catch(e){return {}}}
+function save(d){localStorage.setItem('mueenData',JSON.stringify(d))}
+function show(id){document.querySelectorAll('.panel,#home').forEach(x=>x.classList.remove('show'));document.getElementById(id).classList.add('show');const dateBox=document.querySelector('.datebox');if(dateBox)dateBox.style.display=id==='home'?'block':'none';updateTodayDate();renderStudents();renderReports();renderQuotes();renderSettingsQuoteList();}
+function setAttendance(status){const d=load(),k=key();d.attendance=d.attendance||{};d.attendance[k]=d.attendance[k]||{};const who=document.getElementById('who').value;if(!who){alert('أضيفي طالبة أولاً ثم اختاري اسمها');return;}d.attendance[k][who]=status;save(d);renderStudents();renderReports();alert(status==='حاضر'?'تم تسجيل الحضور':status==='اعتذار'?'تم تسجيل الاعتذار':'تم تسجيل الغياب');}
+let selectedSurahs=[]; let activityMode='hifz'; let pendingActivities=[]; let reportMode='attendance'; let progressMode='surah';
+function filterSurahs(){const q=(document.getElementById('surahSearch').value||'').trim();renderSurahPicker(q)}
+function renderSurahPicker(q=''){const box=document.getElementById('surahPicker');if(!box)return;const query=q.toLowerCase();box.innerHTML='';names.forEach((name,i)=>{if(query&&!name.includes(query))return;const selected=selectedSurahs.includes(name);const row=document.createElement('button');row.type='button';row.className='surah-option'+(selected?' selected':'');row.setAttribute('role','option');row.setAttribute('aria-selected',selected?'true':'false');row.innerHTML=`<span class="surah-label"><span class="mini-no">${arNums(i+1)}</span><span>${name}</span></span><span class="pick">${selected?'✓':''}</span>`;row.addEventListener('click',()=>toggleSurah(name));box.appendChild(row)});updateSelectionNote()}
+function toggleSurah(name){if(selectedSurahs.includes(name))selectedSurahs=selectedSurahs.filter(x=>x!==name);else selectedSurahs.push(name);renderSelectedSurahs();renderSurahPicker(document.getElementById('surahSearch').value.trim())}
+function renderSelectedSurahs(){const box=document.getElementById('selectedSurahs');if(!box)return;box.innerHTML='';selectedSurahs.forEach((name)=>{const chip=document.createElement('span');chip.className='selected-chip';chip.innerHTML=`<span>${name}</span><button type="button" aria-label="حذف ${name}">×</button>`;chip.querySelector('button').addEventListener('click',()=>removeSelectedSurah(name));box.appendChild(chip)});updateSelectionNote();updateAyahControls()}
+function updateSelectionNote(){const el=document.getElementById('selectionCount');if(el)el.textContent=selectedSurahs.length?`تم اختيار ${arNums(selectedSurahs.length)} ${selectedSurahs.length===1?'سورة':'سور'}`:'لم يتم اختيار سورة'}
+function removeSelectedSurah(name){selectedSurahs=selectedSurahs.filter(x=>x!==name);renderSelectedSurahs();renderSurahPicker(document.getElementById('surahSearch').value.trim())}
+function clearSelectedSurahs(){selectedSurahs=[];surahScope='full';if(document.getElementById('ayahFrom'))document.getElementById('ayahFrom').value='';if(document.getElementById('ayahTo'))document.getElementById('ayahTo').value='';renderSelectedSurahs();renderSurahPicker(document.getElementById('surahSearch').value.trim())}
+function setActivityMode(mode){activityMode=mode;['hifz','review','test','sard'].forEach(m=>{const el=document.getElementById('activity'+(m==='hifz'?'Hifz':m==='review'?'Review':m==='test'?'Test':'Sard'));if(el)el.classList.toggle('active',m===mode)});const map={hifz:'الحفظ',review:'المراجعة',test:'الاختبار',sard:'السرد'};const label=document.getElementById('surahLabel');if(label)label.textContent=mode==='hifz'?'':mode==='review'?'سور المراجعة':mode==='test'?'سور الاختبار':'سور السرد';const hint=document.getElementById('pagesHint');if(hint)hint.textContent=mode==='hifz'?'سيُحدّث تقدم الحفظ عند التسجيل.':`سيُسجّل ${map[mode]} في سجل الطالبة دون تغيير تقدم الحفظ.`;const btn=document.getElementById('addActivityBtn');if(btn)btn.innerHTML='<span class="add-icon" aria-hidden="true">+</span><span>إضافة</span>'}
+function setSurahScope(scope){surahScope=scope;document.getElementById('scopeFull')?.classList.toggle('active',scope==='full');document.getElementById('scopeAyahs')?.classList.toggle('active',scope==='ayahs');updateAyahControls()}
+function updateAyahControls(){const wrap=document.getElementById('surahScope');if(!wrap)return;const one=selectedSurahs.length===1;wrap.style.display=selectedSurahs.length?'block':'none';const btn=document.getElementById('scopeAyahs');if(btn){btn.disabled=!one;if(!one&&surahScope==='ayahs')surahScope='full'}const range=document.getElementById('ayahRange');if(range)range.style.display=(one&&surahScope==='ayahs')?'grid':'none';document.getElementById('scopeFull')?.classList.toggle('active',surahScope==='full');document.getElementById('scopeAyahs')?.classList.toggle('active',surahScope==='ayahs');const hint=document.getElementById('ayahHint');if(hint&&one){const idx=names.indexOf(selectedSurahs[0]);hint.textContent=`سورة ${selectedSurahs[0]} عدد آياتها ${ayahCounts[idx]} آية.`}}
+function addPendingActivity(){const who=document.getElementById('who').value;if(!who){alert('اختاري اسم الطالبة أولاً');return}if(!selectedSurahs.length){alert('اختاري سورة أولاً');return}let entry={type:activityMode,label:{hifz:'حفظ',review:'مراجعة',test:'اختبار',sard:'سرد'}[activityMode],mode:'surah',surahs:selectedSurahs.slice()};if(surahScope==='ayahs'){if(selectedSurahs.length!==1){alert('تحديد الآيات متاح لسورة واحدة فقط');return}const idx=names.indexOf(selectedSurahs[0]),max=ayahCounts[idx]||0;const from=Number(document.getElementById('ayahFrom').value)||0,to=Number(document.getElementById('ayahTo').value)||0;if(from<1||to<from||to>max){alert(`حددي نطاق آيات صحيح من 1 إلى ${max}`);return}entry.scope='ayahs';entry.ayahFrom=from;entry.ayahTo=to;entry.ayahCount=to-from+1}else entry.scope='full';pendingActivities.push(entry);renderPendingActivities();selectedSurahs=[];surahScope='full';if(document.getElementById('ayahFrom'))document.getElementById('ayahFrom').value='';if(document.getElementById('ayahTo'))document.getElementById('ayahTo').value='';renderSelectedSurahs();renderSurahPicker(document.getElementById('surahSearch').value.trim())}
+function renderPendingActivities(){const box=document.getElementById('pendingActivities');if(!box)return;if(!pendingActivities.length){box.innerHTML='';return}box.innerHTML=pendingActivities.map((a,i)=>{let detail='';if(a.mode==='pages')detail=`من صفحة ${arNums(a.from)} إلى ${arNums(a.to)} — من سورة ${a.pageStartSurah} إلى سورة ${a.pageEndSurah}`;else if(a.scope==='ayahs')detail=`سورة ${a.surahs[0]} — من آية ${arNums(a.ayahFrom)} إلى آية ${arNums(a.ayahTo)}`;else detail=a.surahs.length===1?`سورة ${a.surahs[0]} كاملة`:a.surahs.join('، ');return `<div class="pending-item"><div><b>${a.label}</b><span>${detail}</span></div><button type="button" aria-label="حذف ${a.label}" onclick="removePendingActivity(${i})">×</button></div>`}).join('')}
+function removePendingActivity(i){pendingActivities.splice(i,1);renderPendingActivities()}
+function setProgressMode(mode){progressMode='surah';const sm=document.getElementById('surahMode');if(sm)sm.style.display='block';const pm=document.getElementById('pagesMode');if(pm)pm.style.display='none'}
+function addActivity(store,k,who,entry){store[k]=store[k]||{};store[k][who]=Array.isArray(store[k][who])?store[k][who]:store[k][who]?[store[k][who]]:[];store[k][who].push(entry)}
+function showRegistrationSuccess(dateStr){const old=document.getElementById('registrationSuccess');if(old)old.remove();document.querySelectorAll('.panel,#home').forEach(x=>x.classList.remove('show'));const box=document.createElement('section');box.id='registrationSuccess';box.className='panel show registration-success';const d=new Date(dateStr+'T12:00:00');const day=new Intl.DateTimeFormat('ar-SA-u-ca-gregory-nu-latn',{weekday:'long'}).format(d);const date=new Intl.DateTimeFormat('ar-SA-u-ca-gregory-nu-latn',{day:'numeric',month:'long',year:'numeric'}).format(d);box.innerHTML=`<div class="success-card"><div class="success-check">✓</div><h2>تم تسجيل ورد اليوم بنجاح</h2><p>تم حفظ ورد الطالبة وتسجيله في سجلها.</p><div class="success-date">${day} — ${date}</div><button type="button" class="primary success-home" onclick="show('home');this.closest('#registrationSuccess')?.remove()">العودة إلى الرئيسية</button></div>`;document.querySelector('main').appendChild(box)}
+function saveActivity(){const d=load(),k=key(),who=document.getElementById('who').value;if(!who){alert('اختاري اسم الطالبة أولاً');return}if(!pendingActivities.length){alert('أضيفي عملًا واحدًا على الأقل أولاً');return}d.progress=d.progress||{};d.hifzHistory=d.hifzHistory||{};d.review=d.review||{};d.tests=d.tests||{};d.sard=d.sard||{};pendingActivities.forEach(a=>{const entry={mode:a.mode,updated:k};if(a.mode==='pages'){entry.from=a.from;entry.to=a.to;entry.count=a.count}else{entry.surahs=a.surahs.slice();if(a.scope==='ayahs'){entry.ayahFrom=a.ayahFrom;entry.ayahTo=a.ayahTo;entry.ayahCount=a.ayahCount}};if(a.type==='hifz'){if(a.mode==='pages'){const prev=d.progress[who]||{};const covered=new Set(Array.isArray(prev.pagesCovered)?prev.pagesCovered.map(Number):[]);for(let pg=a.from;pg<=a.to;pg++)covered.add(pg);d.progress[who]={...prev,pagesCovered:[...covered].sort((x,y)=>x-y),pagesTotal:covered.size,mode:'pages',lastPage:a.to,updated:k}}else{const idx=Math.max(...a.surahs.map(x=>names.indexOf(x)));const current=Number.isInteger(d.progress[who]?.lastSurahIndex)?d.progress[who].lastSurahIndex:-1;const isFull=a.scope==='full'||(a.scope==='ayahs'&&a.ayahFrom===1&&a.ayahTo===ayahCounts[idx]);if(idx>=current)d.progress[who]={...(d.progress[who]||{}),mode:'surah',lastSurah:names[idx],lastSurahIndex:idx,completedSurahs:Math.max(Number(d.progress[who]?.completedSurahs)||0,Math.max(0,idx-1+(isFull?1:0))),selectedSurahs:a.surahs.slice(),updated:k}}addActivity(d.hifzHistory,k,who,{...entry,...(a.mode==='surah'?{lastSurah:a.surahs[a.surahs.length-1],lastSurahIndex:Math.max(...a.surahs.map(x=>names.indexOf(x)))}:{})})}else if(a.type==='review')addActivity(d.review,k,who,entry);else if(a.type==='test')addActivity(d.tests,k,who,entry);else addActivity(d.sard,k,who,entry)});save(d);const count=pendingActivities.length;pendingActivities=[];renderPendingActivities();renderStudents();renderReports();showRegistrationSuccess(k) }
+function setReportMode(mode){reportMode=mode;document.getElementById('reportAttendanceTab').classList.toggle('active',mode==='attendance');document.getElementById('reportProgressTab').classList.toggle('active',mode==='progress');document.getElementById('attendanceReport').style.display=mode==='attendance'?'block':'none';document.getElementById('progressReport').style.display=mode==='progress'?'block':'none';renderReports()}
+function statusFor(name){const d=load(),k=key(),today=d.attendance?.[k]?.[name];if(today)return today;if(isAfterDay())return 'غياب';return 'لم تسجل'}
+function isAfterDay(){return new Date().getHours()>=23}
+function badge(status){if(status==='حاضر')return '🟢 حضور';if(status==='اعتذار')return '🟡 اعتذار';if(status==='غياب')return '🔴 غياب';if(status==='إجازة')return '⚪ إجازة';return '⚪ لم تسجل'}
+const ayahCounts=[7,286,200,176,120,165,206,75,129,109,123,111,43,52,99,128,111,110,98,135,112,78,118,64,77,227,93,88,69,60,34,30,73,54,45,83,182,88,75,85,54,53,89,59,37,35,38,29,18,45,60,49,62,55,78,96,29,22,24,13,14,11,11,18,12,12,30,52,52,44,28,28,20,56,40,31,50,40,46,42,29,19,36,25,22,17,19,26,30,20,15,21,11,8,8,19,5,8,8,11,11,8,3,9,5,4,7,3,6,3,5,4,5,6];
+function pageToSurahName(page){const pg=Number(page)||1;let idx=0;for(let i=0;i<quranSurahStartPages.length;i++){if(quranSurahStartPages[i]<=pg)idx=i;else break}return names[idx]||names[0]}
+const quranSurahStartPages=[1,2,50,77,106,128,151,177,187,208,221,235,249,255,262,267,282,293,305,312,322,332,342,350,359,367,377,385,396,404,411,415,418,428,434,440,446,453,458,467,477,483,489,496,499,502,507,511,515,518,520,523,526,528,531,534,537,542,545,549,551,553,554,556,558,560,562,564,566,568,570,572,574,575,577,578,580,582,583,585,586,587,587,589,590,591,591,592,593,594,595,595,596,596,597,597,598,598,599,599,600,600,601,601,601,602,602,602,603,603,603,604,604,604,604,604,604,604,604,604,604,604,604,604,604];
+const QURAN_START_PAGE=2,QURAN_END_PAGE=604,QURAN_TOTAL_PAGES=603,QURAN_TOTAL_SURAHS=113;
+function completedSurahsFromPages(p){
+ const covered=new Set(Array.isArray(p?.pagesCovered)?p.pagesCovered.map(Number):[]);
+ if(!covered.size&&Number(p?.pagesTotal)>0&&Number.isInteger(p?.lastPage)){const end=Math.min(QURAN_END_PAGE,Number(p.lastPage));const count=Math.min(QURAN_TOTAL_PAGES,Number(p.pagesTotal)||0);for(let i=QURAN_START_PAGE;i<QURAN_START_PAGE+count&&i<=end;i++)covered.add(i)}
+ const done=[];for(let i=1;i<names.length;i++){const start=Math.max(QURAN_START_PAGE,quranSurahStartPages[i]);const end=(i+1<quranSurahStartPages.length?Math.max(start,quranSurahStartPages[i+1]-1):QURAN_END_PAGE);let complete=true;for(let pg=start;pg<=end;pg++){if(!covered.has(pg)){complete=false;break}}if(complete)done.push(i)}return {covered,done};
+}
+function progressInfo(p){
+ if(!p)return {text:'لم يبدأ الحفظ',pct:0,completed:0,remainingSurahs:QURAN_TOTAL_SURAHS,remainingPages:QURAN_TOTAL_PAGES,level:'لم يبدأ'};
+ if(p.mode==='pages'){const info=completedSurahsFromPages(p),pages=info.covered.size,completed=info.done.length,remainingPages=Math.max(0,QURAN_TOTAL_PAGES-pages),remainingSurahs=Math.max(0,QURAN_TOTAL_SURAHS-completed),pct=Math.round(pages/QURAN_TOTAL_PAGES*100),level=pct>=100?'ختم الحفظ':pct>=75?'متقدم جدًا':pct>=50?'متقدم':pct>=25?'متوسط':'بداية';return {text:`${completed} سورة مكتملة — ${remainingSurahs} سورة متبقية`,pct,completed,remainingSurahs,remainingPages,level,currentPage:p.lastPage||0};}
+ if(Number.isInteger(p.lastSurahIndex)){const completed=Math.max(0,Math.min(QURAN_TOTAL_SURAHS,p.completedSurahs??(p.lastSurahIndex-1))),remainingSurahs=Math.max(0,QURAN_TOTAL_SURAHS-completed),current=names[p.lastSurahIndex]||'البقرة',pct=Math.round(completed/QURAN_TOTAL_SURAHS*100),level=pct>=100?'ختم الحفظ':pct>=75?'متقدم جدًا':pct>=50?'متقدم':pct>=25?'متوسط':'بداية';return {text:`${completed} سورة مكتملة — ${remainingSurahs} سورة متبقية`,pct,current,completed,remainingSurahs,remainingPages:0,level};}
+ return {text:'لم يبدأ الحفظ',pct:0,completed:0,remainingSurahs:QURAN_TOTAL_SURAHS,remainingPages:QURAN_TOTAL_PAGES,level:'لم يبدأ'};
+}
+function normalizeEntries(d,storeName,n){
+ const out=[];
+ Object.entries(d[storeName]||{}).forEach(([date,people])=>{
+   const raw=people?.[n];
+   if(Array.isArray(raw)) raw.forEach(r=>out.push({date,...r}));
+   else if(raw) out.push({date,...raw});
+ });
+ return out.sort((a,b)=>b.date.localeCompare(a.date));
+}
+function reviewInfo(d,n){
+ const entries=normalizeEntries(d,'review',n),tests=normalizeEntries(d,'tests',n);
+ let pages=0;entries.forEach(x=>pages+=Number(x.count)||0);
+ return {total:entries.length,pages,last:entries[0]||null,testTotal:tests.length,lastTest:tests[0]||null};
+}
+function renderStudents(){const d=load(),box=document.getElementById('studentCards');if(!box)return;document.getElementById('studentCount').textContent=students.length+' طالبات';box.innerHTML=students.map(n=>{const p=d.progress?.[n]||{},st=statusFor(n),info=progressInfo(p),rv=reviewInfo(d,n),cls=st==='حاضر'?'status-present':st==='اعتذار'?'status-excused':st==='غياب'?'status-absent':'status-none';return `<div class="card student-clickable" role="button" tabindex="0" aria-label="فتح سجل ${n}" onclick="openStudentRecord('${n}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openStudentRecord('${n}')}" ><div class="row"><div><div class="student">${n}</div><div class="muted">${info.level}</div></div><span class="tag ${cls}">${badge(st)}</span></div><div class="bar"><div class="fill" style="width:${info.pct}%"></div></div><div class="progress-stats"><span>: <b>${info.completed}</b> / ${QURAN_TOTAL_SURAHS}</span><span>المتبقي: <b>${info.remainingSurahs}</b> سورة</span><span>التقدم: <b>${info.pct}%</b></span></div><div class="muted" style="margin-top:8px">${info.remainingPages?`المتبقي للختم: ${info.remainingPages} صفحة`:'تم ختم حفظ القرآن'} · مراجعات: ${rv.total} · اختبارات: ${rv.testTotal}</div></div>`}).join('')}
+function formatRecordDate(date){try{return new Intl.DateTimeFormat('ar-SA',{weekday:'short',day:'numeric',month:'short',year:'numeric'}).format(new Date(date+'T12:00:00'))}catch(e){return date}}
+function activityDetail(r){if(!r)return '';if(r.mode==='pages')return `من صفحة ${arNums(r.from)} إلى ${arNums(r.to)} — من سورة ${r.pageStartSurah||pageToSurahName(r.from)} إلى سورة ${r.pageEndSurah||pageToSurahName(r.to)} — ${arNums(r.count)} صفحات`;if(r.surahs?.length){if(r.scope==='ayahs')return `سورة ${r.surahs[0]} — من آية ${arNums(r.ayahFrom)} إلى آية ${arNums(r.ayahTo)}`;return r.surahs.length===1?`سورة ${r.surahs[0]} كاملة`:`السور: ${r.surahs.join('، ')}`}return 'تم تسجيل النشاط'}
+function openStudentRecord(name){show('studentRecord');document.getElementById('studentRecordContent').innerHTML=renderStudentRecord(name)}
+function renderStudentRecord(name){
+ const d=load(),p=d.progress?.[name]||{},info=progressInfo(p);
+ const h=normalizeEntries(d,'hifzHistory',name),rev=normalizeEntries(d,'review',name),tests=normalizeEntries(d,'tests',name),sard=normalizeEntries(d,'sard',name);
+ const initials=name.trim().charAt(0);
+ const section=(title,items,empty,kind)=>`<div class="record-section"><div class="record-section-head"><h3>${title}</h3><span class="record-count">${arNums(items.length)} سجل</span></div><div class="record-list">${items.length?items.map(r=>`<div class="record-item"><div class="top"><span class="type">${kind}</span><span class="date">${formatRecordDate(r.date)}</span></div><div class="detail">${activityDetail(r)}</div></div>`).join(''):('<div class="record-empty">'+empty+'</div>')}</div></div>`;
+ return `<div class="record-hero"><div class="record-title"><div class="record-avatar">${initials}</div><div><h2>${name}</h2><p>السجل الشخصي للإنجازات</p></div></div><div class="record-stats"><div class="record-stat"><strong>${arNums(info.pct)}%</strong><span>نسبة التقدم</span></div><div class="record-stat"><strong>${arNums(rev.length)}</strong><span>مراجعة</span></div><div class="record-stat"><strong>${arNums(tests.length)}</strong><span>اختبار</span></div><div class="record-stat"><strong>${arNums(sard.length)}</strong><span>سرد</span></div></div><div class="muted" style="margin-top:10px">موضع الحفظ الحالي: ${info.text}</div></div>${section('سجل الحفظ',h,'لا يوجد سجل حفظ مسجل حتى الآن.','حفظ')}${section('سجل المراجعة',rev,'لا توجد مراجعات مسجلة حتى الآن.','مراجعة')}${section('سجل الاختبار',tests,'لا توجد اختبارات مسجلة حتى الآن.','اختبار')}${section('سجل السرد',sard,'لا توجد أعمال سرد مسجلة حتى الآن.','سرد')}`;
+}
+
+function renderReports(){
+ const d=load(),k=key(),vals=students.map(n=>statusFor(n));
+ const attended=vals.filter(x=>x==='حاضر').length;
+ const recordedDays=Object.keys(d.attendance||{}).filter(date=>d.attendance?.[date]&&Object.keys(d.attendance[date]).length>0).length;
+ const excused=vals.filter(x=>x==='اعتذار').length;
+ const absent=vals.filter(x=>x==='غياب').length;
+ const lab=document.getElementById('reportDateLabel');
+ if(lab)lab.textContent=new Intl.DateTimeFormat('ar-SA',{weekday:'long',day:'numeric',month:'long',year:'numeric'}).format(new Date());
+ const sum=document.getElementById('attendanceSummary');
+ if(sum)sum.innerHTML=`<div class="summary-item primary"><span class="summary-label">أيام الحلقة المسجلة</span><strong>${arNums(recordedDays)} <small>يوم</small></strong></div><div class="summary-item"><span class="summary-label">الحضور اليوم</span><strong>${arNums(attended)} <small>من ${arNums(students.length)}</small></strong></div><div class="summary-item"><span class="summary-label">نسبة الحضور</span><strong>${arNums(students.length?Math.round(attended/students.length*100):0)}%</strong></div>`;
+ const rows=document.getElementById('attendanceRows');
+ if(rows)rows.innerHTML=students.map(n=>{
+   let counts={حاضر:0,اعتذار:0,غياب:0};
+   Object.values(d.attendance||{}).forEach(day=>{const x=day?.[n];if(x&&counts[x]!==undefined)counts[x]++});
+   return `<div class="attendance-report-row"><span class="student-name">${n}</span><div class="attendance-badges"><span class="att-badge present">${arNums(counts.حاضر)} حضور</span><span class="att-badge excused">${arNums(counts.اعتذار)} اعتذار</span><span class="att-badge absent">${arNums(counts.غياب)} غياب</span></div></div>`;
+ }).join('');
+ const pc=document.getElementById('progressReportCards');
+ if(pc)pc.innerHTML=students.map(n=>{const info=progressInfo(d.progress?.[n]);const rv=reviewInfo(d,n);const last=rv.last?.date?`آخر مراجعة: ${rv.last.date}`:'لا توجد مراجعة مسجلة';return `<div class="progress-item student-clickable" role="button" tabindex="0" onclick="openStudentRecord('${n}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openStudentRecord('${n}')}"><div class="top"><span class="name">${n}</span><span class="progress-percent">${arNums(info.pct)}%</span></div><div class="progress-track"><div class="progress-fill" style="width:${info.pct}%"></div></div><div class="progress-meta">: ${info.completed} · المتبقي: ${info.remainingSurahs} سورة · مستوى التقدم: ${info.level} · ${last} · المراجعات: ${rv.total} · الاختبارات: ${rv.testTotal}</div></div>`}).join('');
+}
+document.getElementById('surahSearch')?.addEventListener('input',filterSurahs);updateTodayDate();refreshStudents();renderSelectedSurahs();renderSurahPicker();renderPendingActivities();setActivityMode('hifz');renderStudents();renderReports();renderQuotes();renderSettingsQuoteList();
+</script><script id="schedule-fix-script">
+(function(){
+  const HIJRI='ar-SA-u-ca-islamic-umalqura-nu-latn';
+  function dateKeyLocal(d){return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+  function hijriParts(d){
+    const parts=new Intl.DateTimeFormat(HIJRI,{day:'numeric',month:'numeric',year:'numeric'}).formatToParts(d);const o={};parts.forEach(x=>{if(x.type!=='literal')o[x.type]=x.value});return {day:Number(o.day),month:Number(o.month),year:Number(o.year)}}
+  function hijriMonthName(d){return new Intl.DateTimeFormat(HIJRI,{month:'long',year:'numeric'}).format(d)}
+  function overrides(){const d=load();d.calendarOverrides=d.calendarOverrides||{};return d.calendarOverrides}
+  window.isCircleDay=function(dateStr){const ov=overrides()[dateStr];if(ov==='off'||ov==='leave')return false;if(ov==='work')return true;const d=new Date(dateStr+'T12:00:00');const w=d.getDay();return w>=0&&w<=3;};
+  window.isOffDay=function(dateStr){return !window.isCircleDay(dateStr);};
+  const oldStatusFor=window.statusFor;
+  window.statusFor=function(name){const d=load(),k=key(),today=d.attendance?.[k]?.[name];if(today)return today;if(!isCircleDay(k))return 'إجازة';if(isAfterDay())return 'غياب';return 'لم تسجل';};
+  function saveOverride(dateStr){const d=load();d.calendarOverrides=d.calendarOverrides||{};const currentlyWork=isCircleDay(dateStr);const baseWork=new Date(dateStr+'T12:00:00').getDay()<=3; if(currentlyWork===baseWork){d.calendarOverrides[dateStr]=currentlyWork?'off':'work';}else{delete d.calendarOverrides[dateStr];}save(d);renderCircleCalendar();renderStudents();renderReports();}
+  window.toggleCalendarDay=function(dateStr){const d=new Date(dateStr+'T12:00:00');const base=d.getDay()<=3;if(!base)return;openCalendarChoice(dateStr);};
+  window.openCalendarChoice=function(dateStr){
+    document.getElementById('calendarChoiceModal')?.remove();
+    const wrap=document.createElement('div');wrap.id='calendarChoiceModal';wrap.className='calendar-choice-overlay';
+    wrap.innerHTML=`<div class="calendar-choice-card" role="dialog" aria-modal="true" aria-label="تعديل يوم التحفيظ"><div class="calendar-choice-title">تعديل يوم التحفيظ</div><div class="calendar-choice-text">اختاري الإجراء لهذا اليوم</div><div class="calendar-choice-actions"><button type="button" class="calendar-cancel-btn" data-choice="cancel">إلغاء</button><button type="button" class="calendar-leave-btn" data-choice="leave">إجازة</button></div><button type="button" class="calendar-close-btn">رجوع</button></div>`;
+    document.body.appendChild(wrap);
+    wrap.querySelectorAll('[data-choice]').forEach(btn=>btn.addEventListener('click',()=>{const d=load();d.calendarOverrides=d.calendarOverrides||{};d.calendarOverrides[dateStr]=btn.dataset.choice==='leave'?'leave':'off';save(d);wrap.remove();renderCircleCalendar();renderStudents();renderReports();}));
+    wrap.querySelector('.calendar-close-btn').addEventListener('click',()=>wrap.remove());
+  };
+  window.renderCircleCalendar=function(){
+    const el=document.getElementById('dates'),title=document.getElementById('monthTitle');if(!el||!title)return;
+    const now=new Date(),hp=hijriParts(now);title.textContent=hijriMonthName(now);
+    const found=[];const cursor=new Date(now);cursor.setDate(cursor.getDate()-25);
+    for(let i=0;i<100;i++){const d=new Date(cursor);d.setDate(cursor.getDate()+i);const p=hijriParts(d);if(p.year===hp.year&&p.month===hp.month)found.push(d);}
+    if(!found.length)return;
+    const first=found[0],start=first.getDay(),total=found.length,todayKey=dateKeyLocal(now);let h='';
+    for(let i=0;i<start;i++)h+='<span class="date-cell empty"></span>';
+    found.forEach(dt=>{const k=dateKeyLocal(dt),base=dt.getDay()<=3,ov=overrides()[k],work=isCircleDay(k);let cls='date-cell '+(base?'circle-day':'weekend-day')+(ov?(ov==='leave'?' leave-day':' cancelled-day'):'')+(k===todayKey?' cal-today':'')+(ov?' overridden':'');const label=ov==='leave'?'إجازة':ov==='off'?'ملغى':base?'يوم تحفيظ':'إجازة نهاية الأسبوع';const action=base?` onclick="toggleCalendarDay('${k}')"`:' disabled';h+=`<button type="button" class="${cls}"${action} title="${label}"><span>${hijriParts(dt).day}</span></button>`;});
+    el.innerHTML=h;
+  };
+  window.addEventListener('load',function(){renderCircleCalendar();});
+})();
+</script>
+<style id="registration-success-style">
+.registration-success{display:none;min-height:420px;align-items:center;justify-content:center;padding:24px}.registration-success.show{display:flex!important}.success-card{width:100%;max-width:620px;text-align:center;background:#fbf9f4;border:1px solid #e3d8c5;border-radius:28px;padding:38px 24px;box-shadow:0 10px 30px rgba(23,37,59,.08)}.success-check{width:62px;height:62px;margin:0 auto 18px;border-radius:50%;background:#17253b;color:#f5f0e6;display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:700}.success-card h2{margin:0;color:#17253b;font-size:28px}.success-card p{margin:12px 0 8px;color:#777;font-size:19px}.success-date{color:#9a7b3f;font-size:20px;font-weight:600;margin:8px 0 26px}.success-home{min-width:190px}
+</style>
+<style id="calendar-editable-style">
+#calendarPanel .dates{gap:8px!important}
+#calendarPanel .date-cell{border:0;cursor:pointer;font-family:inherit;color:#18273f;min-height:42px;transition:.15s}
+#calendarPanel button.date-cell{width:100%;background:transparent}
+#calendarPanel .date-cell.circle-day{background:#f5f0e4}
+#calendarPanel .date-cell.off-day{background:#e3e3e3;color:#777;opacity:1}
+#calendarPanel .date-cell.weekend-day{background:#e3e3e3!important;color:#777!important;cursor:default!important;opacity:1}
+#calendarPanel .date-cell.cancelled-day{background:#f6dada!important;color:#a12b2b!important;border:1px solid #d9a2a2!important}
+#calendarPanel .date-cell.leave-day{background:#f6dada!important;color:#a12b2b!important;border:1px solid #d9a2a2!important}
+#calendarPanel .date-cell.overridden{outline:2px solid #b49a61;outline-offset:-2px}
+#calendarPanel .date-cell.cal-today{box-shadow:inset 0 0 0 2px #18273f}
+#calendarPanel .date-cell:hover{transform:translateY(-1px);filter:brightness(.98)}#calendarPanel .date-cell{cursor:pointer!important}#calendarPanel .date-cell.empty{cursor:default!important}
+</style>
+<style id="final-home-card-size">
+#home .icons{gap:14px!important;margin-top:16px!important;}
+#home .icons .icon{height:136px!important;min-height:136px!important;padding:12px 8px!important;border-radius:18px!important;gap:8px!important;}
+#home .icons .home-icon-refined,#home .icons .svgicon{width:60px!important;height:60px!important;min-width:60px!important;min-height:60px!important;border-radius:16px!important;}
+#home .icons .home-icon-refined svg,#home .icons .svgicon svg{width:29px!important;height:29px!important;}
+#home .icons .icon > :last-child{font-size:19px!important;line-height:1.05!important;}
+@media(max-width:360px){#home .icons{gap:11px!important}#home .icons .icon{height:128px!important;min-height:128px!important}#home .icons .home-icon-refined,#home .icons .svgicon{width:56px!important;height:56px!important;min-width:56px!important;min-height:56px!important}#home .icons .home-icon-refined svg,#home .icons .svgicon svg{width:27px!important;height:27px!important}}
+</style>
+
+<style id="home-icon-size-final">
+#home .icons .home-icon-refined{width:82px!important;height:82px!important;min-width:82px!important;min-height:82px!important;border-radius:20px!important;background:#f5f0e6!important;border:1px solid #e5dccf!important;box-shadow:0 4px 12px rgba(23,37,59,.045)!important}
+#home .icons .home-icon-refined svg{width:38px!important;height:38px!important;min-width:38px!important;min-height:38px!important;stroke-width:1.8!important}
+#home .icons .icon{gap:12px!important}
+@media(max-width:360px){#home .icons .home-icon-refined{width:76px!important;height:76px!important;min-width:76px!important;min-height:76px!important}.home-icon-refined svg{width:35px!important;height:35px!important}}
+</style>
+</body></html>
+<style id="settings-final-polish">
+/* تهذيب صفحة الإعدادات */
+#settings .settings-card{padding:24px 22px 22px}
+#settings .settings-row{border-bottom:0!important;padding:8px 0 10px!important}
+#settings .settings-row + .settings-add{margin-top:2px}
+#settings .settings-add,#settings .quote-add{align-items:center!important;margin-top:10px!important}
+#settings .settings-add input,#settings .quote-add textarea{height:52px!important;min-height:52px!important;box-sizing:border-box!important}
+#settings .settings-add button,#settings .quote-add button{height:52px!important;min-height:52px!important;display:flex!important;align-items:center!important;justify-content:center!important;transform:translateY(-2px)}
+#settings .settings-sub{margin-top:3px!important}
+#settingsStudentList{margin-top:16px!important}
+#settingsStudentList .settings-student-count{margin:0 0 8px!important}
+#settingsStudentList .settings-student-list{margin-top:0!important}
+#settings .settings-quotes{border-top:0!important;border-bottom:0!important;margin-top:22px!important;padding-top:10px!important}
+#settings .quote-add{margin-top:10px!important}
+#settingsQuoteList{margin-top:12px!important}
+#settings .quote-row{min-height:56px;box-sizing:border-box}
+#settings .settings-title{line-height:1.25!important}
+</style>
+
+<style id="calendar-final-fix">
+#calendarPanel .days{grid-template-columns:repeat(7,minmax(0,1fr));gap:8px!important;direction:rtl!important}
+#calendarPanel .dates{grid-template-columns:repeat(7,minmax(0,1fr));gap:8px!important;direction:rtl!important}
+#calendarPanel .days b{font-size:14px!important;font-weight:600!important;color:#777!important;white-space:nowrap}
+#calendarPanel .date-cell{min-height:48px!important;border-radius:12px!important;font-size:15px!important;border:1px solid transparent!important;box-sizing:border-box;font-family:inherit}
+#calendarPanel .date-cell.circle-day{background:#f4efe4!important;color:#17253b!important}
+#calendarPanel .date-cell.weekend-day{background:#e3e3e3!important;color:#858585!important;cursor:pointer!important}
+#calendarPanel .date-cell.cancelled-day{background:#f5d6d6!important;color:#a12626!important;border:1px solid #d79b9b!important}
+#calendarPanel .date-cell.leave-day{background:#e2f0e5!important;color:#2d6b42!important;border:1px solid #a8c9b0!important}
+#calendarPanel .date-cell.weekend-leave{background:#e3e3e3!important;color:#858585!important;border:1px solid #d0d0d0!important}
+#calendarPanel .date-cell.overridden-work{background:#f4efe4!important;color:#17253b!important;border:1px solid #ded1b9!important}
+#calendarPanel .date-cell.cal-today{box-shadow:inset 0 0 0 2px #17253b!important}
+.calendar-choice-overlay{position:fixed;inset:0;background:rgba(23,37,59,.28);display:flex;align-items:center;justify-content:center;padding:18px;z-index:9999}
+.calendar-choice-card{width:min(360px,100%);background:#fffdf9;border:1px solid #e3d8c5;border-radius:22px;padding:22px;text-align:center;box-shadow:0 16px 40px rgba(23,37,59,.18);font-family:inherit}
+.calendar-choice-title{font-size:22px;font-weight:700;color:#17253b;margin-bottom:7px}.calendar-choice-text{font-size:16px;color:#777;margin-bottom:18px}.calendar-choice-actions{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.calendar-choice-actions button{width:100%;min-height:48px;border-radius:13px;font-family:inherit;font-size:16px}.calendar-cancel-btn{background:#f5d6d6!important;color:#a12626!important;border:1px solid #d79b9b!important}.calendar-leave-btn{background:#e2f0e5!important;color:#2d6b42!important;border:1px solid #a8c9b0!important}.calendar-work-btn{background:#f4efe4!important;color:#17253b!important;border:1px solid #ded1b9!important}.calendar-close-btn{margin-top:10px!important;background:#faf7ef!important;color:#17253b!important;border:1px solid #e3d8c5!important}
+</style>
+<script id="calendar-final-fix-script">
+(function(){
+  const HIJRI='ar-SA-u-ca-islamic-umalqura-nu-latn';
+  const weekdayNames=['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
+  function parts(d){const a=new Intl.DateTimeFormat(HIJRI,{day:'numeric',month:'numeric',year:'numeric'}).formatToParts(d),o={};a.forEach(x=>{if(x.type!=='literal')o[x.type]=x.value});return {day:Number(o.day),month:Number(o.month),year:Number(o.year)}}
+  function keyLocal(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+  function overrides(){const d=load();d.calendarOverrides=d.calendarOverrides||{};return d.calendarOverrides}
+  window.isCircleDay=function(k){const ov=overrides()[k];if(ov==='off'||ov==='leave')return false;if(ov==='work')return true;return new Date(k+'T12:00:00').getDay()<=3};
+  window.isOffDay=function(k){return !window.isCircleDay(k)};
+  window.renderCircleCalendar=function(){
+    const el=document.getElementById('dates'), title=document.getElementById('monthTitle'); if(!el||!title)return;
+    const now=new Date(), hp=parts(now); title.textContent=new Intl.DateTimeFormat(HIJRI,{month:'long',year:'numeric'}).format(now);
+    // Find the actual first day of the current Hijri month, even if it began in the previous Gregorian month.
+    const first=new Date(now); first.setHours(12,0,0,0); first.setDate(first.getDate()-1);
+    while(parts(first).year===hp.year&&parts(first).month===hp.month){first.setDate(first.getDate()-1)}
+    first.setDate(first.getDate()+1);
+    const found=[]; const cursor=new Date(first);
+    while(parts(cursor).year===hp.year&&parts(cursor).month===hp.month){found.push(new Date(cursor));cursor.setDate(cursor.getDate()+1)}
+    if(!found.length)return;
+    const leading=found[0].getDay(), today=keyLocal(now), ov=overrides(); let html='';
+    for(let i=0;i<leading;i++)html+='<span class="date-cell empty" aria-hidden="true"></span>';
+    found.forEach(d=>{
+      const k=keyLocal(d),w=d.getDay(),base=w<=3,state=ov[k];
+      let cls='date-cell ';
+      if(state==='off')cls+='cancelled-day';
+      else if(state==='leave')cls+=(w>=4?' weekend-leave':' leave-day');
+      else if(state==='work')cls+='overridden-work';
+      else if(base)cls+='circle-day';
+      else cls+='weekend-day';
+      if(k===today)cls+=' cal-today';
+      const status = state==='off' ? 'إلغاء' : state==='leave' ? 'إجازة' : state==='work' ? 'دوام' : base ? 'يوم حلقة' : 'إجازة نهاية الأسبوع';
+      html+=`<button type="button" class="${cls}" onclick="openCalendarChoice('${k}')" aria-label="${weekdayNames[w]} ${parts(d).day} - ${status}" title="${status}">${parts(d).day}</button>`;
+    });
+    el.innerHTML=html;
+  };
+  window.openCalendarChoice=function(dateStr){
+    document.getElementById('calendarChoiceModal')?.remove();
+    const d0=new Date(dateStr+'T12:00:00'), isWeekend=d0.getDay()>=4;
+    const wrap=document.createElement('div');wrap.id='calendarChoiceModal';wrap.className='calendar-choice-overlay';
+    const title=isWeekend?'تعديل يوم الإجازة':'تعديل يوم الحلقة';
+    const text=isWeekend?'اختاري حالة هذا اليوم':'اختاري حالة هذا اليوم';
+    const actions='<button type="button" class="calendar-work-btn" data-state="work">دوام</button><button type="button" class="calendar-leave-btn" data-state="leave">إجازة</button><button type="button" class="calendar-cancel-btn" data-state="off">إلغاء</button>';
+    wrap.innerHTML=`<div class="calendar-choice-card" role="dialog" aria-modal="true"><div class="calendar-choice-title">${title}</div><div class="calendar-choice-text">${text}</div><div class="calendar-choice-actions">${actions}</div><button type="button" class="calendar-close-btn">إغلاق</button></div>`;
+    document.body.appendChild(wrap);
+    wrap.querySelectorAll('[data-state]').forEach(b=>b.addEventListener('click',()=>{const d=load();d.calendarOverrides=d.calendarOverrides||{};d.calendarOverrides[dateStr]=b.dataset.state;save(d);wrap.remove();renderCircleCalendar();renderStudents();renderReports();}));
+    wrap.querySelector('.calendar-close-btn').addEventListener('click',()=>wrap.remove());
+    wrap.addEventListener('click',e=>{if(e.target===wrap)wrap.remove()});
+  };
+  document.addEventListener('DOMContentLoaded',()=>renderCircleCalendar());
+  setTimeout(()=>renderCircleCalendar(),50);
+})();
+</script>
