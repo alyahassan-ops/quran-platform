@@ -654,3 +654,80 @@ img,svg,canvas{max-width:100%}
   #reports .summary-item strong{font-size:22px}
 }
 </style>
+
+<style id="calendar-runtime-fix">
+#calendarPanel .days b{overflow:visible!important;text-overflow:clip!important;white-space:normal!important;word-break:keep-all!important;line-height:1.15!important;font-size:clamp(10px,2.9vw,14px)!important}
+#calendarPanel .days{align-items:start!important}
+.calendar-empty{grid-column:1/-1;text-align:center;color:#8b8b8b;padding:18px 8px;font-size:16px}
+</style>
+<script id="calendar-runtime-fix-script">
+(function(){
+  const HIJRI='ar-SA-u-ca-islamic-umalqura-nu-latn';
+  const dayFormatter=new Intl.DateTimeFormat(HIJRI,{day:'numeric',month:'numeric',year:'numeric'});
+  const titleFormatter=new Intl.DateTimeFormat(HIJRI,{month:'long',year:'numeric'});
+  const weekdayNames=['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
+  function parts(date){
+    const values={};
+    dayFormatter.formatToParts(date).forEach(function(item){
+      if(item.type!=='literal')values[item.type]=item.value;
+    });
+    return {day:values.day||'',month:values.month||'',year:values.year||values.relatedYear||''};
+  }
+  function monthKey(date){
+    const value=parts(date);
+    return value.year+'-'+value.month;
+  }
+  function localKey(date){
+    return date.getFullYear()+'-'+String(date.getMonth()+1).padStart(2,'0')+'-'+String(date.getDate()).padStart(2,'0');
+  }
+  function overrides(){
+    const data=load();
+    data.calendarOverrides=data.calendarOverrides||{};
+    return data.calendarOverrides;
+  }
+  window.renderCircleCalendar=function(){
+    const dates=document.getElementById('dates');
+    const title=document.getElementById('monthTitle');
+    if(!dates||!title)return;
+    const now=new Date();
+    const current=parts(now);
+    const currentMonth=monthKey(now);
+    title.textContent=titleFormatter.format(now);
+    const monthDays=[];
+    for(let offset=-45;offset<=45;offset++){
+      const date=new Date(now);
+      date.setHours(12,0,0,0);
+      date.setDate(date.getDate()+offset);
+      if(monthKey(date)===currentMonth)monthDays.push(date);
+    }
+    if(!monthDays.length){
+      dates.innerHTML='<div class="calendar-empty">تعذر تحميل أيام الشهر، أعيدي فتح التقويم.</div>';
+      return;
+    }
+    monthDays.sort(function(a,b){return a-b});
+    const leading=monthDays[0].getDay();
+    const today=localKey(now);
+    const calendarOverrides=overrides();
+    let html='';
+    for(let index=0;index<leading;index++)html+='<span class="date-cell empty" aria-hidden="true"></span>';
+    monthDays.forEach(function(date){
+      const dateKey=localKey(date);
+      const weekday=date.getDay();
+      const baseDay=weekday<=3;
+      const state=calendarOverrides[dateKey];
+      let className='date-cell ';
+      if(state==='off')className+='cancelled-day';
+      else if(state==='leave')className+=(weekday>=4?' weekend-leave':' leave-day');
+      else if(state==='work')className+='overridden-work';
+      else if(baseDay)className+='circle-day';
+      else className+='weekend-day';
+      if(dateKey===today)className+=' cal-today';
+      const status=state==='off'?'إلغاء':state==='leave'?'إجازة':state==='work'?'دوام':baseDay?'يوم حلقة':'إجازة نهاية الأسبوع';
+      html+='<button type="button" class="'+className+'" onclick="openCalendarChoice(\''+dateKey+'\')" aria-label="'+weekdayNames[weekday]+' '+parts(date).day+' - '+status+'" title="'+status+'">'+parts(date).day+'</button>';
+    });
+    dates.innerHTML=html;
+  };
+  window.addEventListener('load',window.renderCircleCalendar);
+  setTimeout(window.renderCircleCalendar,60);
+})();
+</script>
